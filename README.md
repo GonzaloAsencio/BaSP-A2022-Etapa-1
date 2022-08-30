@@ -3,7 +3,6 @@
 Trackgenix is a human resource application designed to load the number of employees and thier hours worked innto a database.
 
 # How to Open 📂
-ACA VA EL GIFT DE ABRIR EL ARCHIVO
 ```bash
 1- Access to the folder "Semana-01".
 2- Open the file "index.html" on your favourite browser.
@@ -13,7 +12,7 @@ During the development of trackgenix the following technologies will be used:
 
 - [Figma](https://www.figma.com/) - Visual Web
 - [Visual Studio Code](https://code.visualstudio.com) - HTML
-- [GitHub](https://github.com) - Control Version
+- [GitHub - Git](https://github.com) - Control Version
 
 ---------------
 
