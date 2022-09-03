@@ -1,0 +1,141 @@
+
+header{
+    width: 100%;
+    height: 126px;
+    z-index: 1;
+    background-color: #AACE9B;
+}
+
+main{
+position: relative;
+float :left;
+width: 75%;
+}
+
+footer{
+
+}
+
+.Header-Burguer{
+    align-items: center;
+}
+
+.Header-Burguer > img {
+    position:relative;
+    width: 45px;
+    height: 44.61px;
+    top: 41px;
+    left: 40px;
+   
+}
+
+.Header-Burguer > input {
+   position: relative;
+   margin: auto;
+   left: 568px;
+   top: 30px;
+
+   width: 377px;
+   height: 36px;
+   background: #D8E7EB;
+   border: 1px solid #D6D6D6;
+   border-radius: 50px;
+}
+
+aside {
+ clear:both;
+ float: left;
+ width:25%;
+}
+
+.aside-Conteiner{
+    position:relative;
+    min-height: 3500px;
+    border-right:2px solid gray;
+}
+
+.aside-Conteiner> h2{
+    position:absolute;
+    border-bottom:3px solid #AACE9B;
+    width: 100px;
+    height: 65.5px;
+    left: 55px;
+    top: 80px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    
+    color: #373867;
+}
+
+
+.aside-Menu{
+position: absolute;
+width: 100%;
+top: 145.5px;
+left: 0px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 35px;
+
+color: #373867;
+}
+
+
+.aside-Menu > ul > li {
+margin-top:72px; 
+border-bottom:  1px solid grey;
+height: 45px;
+}
+
+.aside-Menu > ul > li > a {
+    position:relative;
+    left: 55px;
+    bottom: 36px;
+}
+
+
+.aside-Contact {
+position:relative;
+width: 100px;
+height: 65.5px;
+left: 55px;
+top: 563px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+border-bottom:3px solid #AACE9B;
+color: #373867;
+}
+
+.aside-Contact > h2 {
+margin-bottom: 61px;
+}
+
+.aside-Contact > p {
+    margin: 29px;
+    width: 279px;
+    height: 29px;
+    left: 113px;
+    top: 680px;
+    text-align: left;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+}
+
+.aside-Contact > p> img {
+width: 29px;
+height: 29px;
+left: 55px;
+top: 657px;
+}
