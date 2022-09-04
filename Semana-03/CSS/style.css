@@ -6,10 +6,8 @@ header{
     background-color: #AACE9B;
 }
 
-main{
-position: relative;
-float :left;
-width: 75%;
+.ClearFix{
+   clear:both;
 }
 
 footer{
@@ -54,7 +52,7 @@ aside {
     border-right:2px solid gray;
 }
 
-.aside-Conteiner> h2{
+.aside-Conteiner > h2{
     position:absolute;
     border-bottom:3px solid #AACE9B;
     width: 100px;
@@ -71,11 +69,10 @@ aside {
     color: #373867;
 }
 
-
 .aside-Menu{
 position: absolute;
 width: 100%;
-top: 145.5px;
+top: 212px;
 left: 0px;
 
 font-family: 'Roboto';
@@ -86,7 +83,6 @@ line-height: 35px;
 
 color: #373867;
 }
-
 
 .aside-Menu > ul > li {
 margin-top:72px; 
@@ -100,13 +96,12 @@ height: 45px;
     bottom: 36px;
 }
 
-
 .aside-Contact {
 position:relative;
 width: 100px;
 height: 65.5px;
 left: 55px;
-top: 563px;
+top: 599px;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
@@ -139,3 +134,217 @@ height: 29px;
 left: 55px;
 top: 657px;
 }
+
+main{
+    position: relative;
+    float :left;
+    width: 75%;
+    }
+
+.main-Info >  h1 {
+position: relative;
+width: 473px;
+height: 44px;
+left: 28px;
+top: 65px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 56px;
+letter-spacing: 0.3em;
+
+color: #373867;
+}
+.main-Info >  img {
+    position:relative;
+    margin-left:29px;
+    width: 458px;
+    height: 449px;
+    left: 622px;
+    bottom: 130px;
+}
+.main-Info >  h2 {
+    position: relative;
+    width: 612px;
+    height: 26px;
+    left: 28px;
+    top: 109px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    
+    color: #AACE9B;
+}
+.main-Info > p {
+position: relative;
+width: 617px;
+height: 62px;
+left: 28px;
+top: 172px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+
+color: #373867;
+}
+
+.main-Info > input{
+    /* Button Big */
+
+
+box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 27px 38px;
+gap: 10px;
+
+position: relative;
+left: 28px;
+top: 220px;
+
+/* Colors / White */
+
+background: #FFFFFF;
+/* Light Grayish Green - Secondary variant color */
+
+border: 3px solid #AACE9B;
+
+}
+
+
+.main-Features > h2{
+    position: relative;
+    width: 127px;
+    height: 36px;
+    left:28px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom:3px solid #AACE9B;
+    color: #373867;
+    margin-bottom: 13px;
+
+}
+
+
+.main-Features > article
+{
+    position: relative;
+    left: 28px;
+    display: inline-block;
+    width: 34%;
+
+}
+
+.main-Features > article > img
+{
+    width: 91.68px;
+    height: 88.91px;
+    margin-bottom: 66.8px;
+}
+
+.main-Features > article > p
+{   
+    position: absolute;
+    vertical-align: middle;
+    top:31px;
+    left: 125.74px;
+    width: 150px;
+    height: 89px;
+
+
+
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #373867;
+
+}
+
+
+.box{
+    width: 100%;
+    margin: auto;
+}
+
+
+.main-WhyUseTrackgenix > h2{
+width: 304px;
+height: 51.5px;
+left: 421px;
+top: 1174px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+/* identical to box height */
+
+
+color: #373867;
+border-bottom:3px solid #AACE9B;
+
+}
+
+.main-WhyUseTrackgenix > img{
+    margin-top: 44.5px;
+    margin-right: 103px;
+}
+
+.Box{
+    position: relative;
+    border: 10px #cccc;
+    padding-left: 24px;
+    padding-top: 44.5px;
+    padding-bottom: 142px;
+    border-radius: 1px;
+}
+
+.Box > img {
+
+    width: 331px;
+    height: 241px;
+}
+
+.Box > ul{
+    position:absolute;
+    left: 458px;
+    top:50.71px;
+}
+
+.Box > ul > li{
+padding-left: 32.12px;    
+padding-bottom: 42px;
+list-style-image: url(/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/WhyIconpng.png);
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #373867;
+
+}
+
+
+
+    
+
