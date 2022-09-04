@@ -6,6 +6,10 @@ header{
     background-color: #AACE9B;
 }
 
+#optionalstuff{
+    display: none;  
+}
+
 .ClearFix{
    clear:both;
 }
@@ -288,6 +292,7 @@ border: 3px solid #AACE9B;
 .main-WhyUseTrackgenix > h2{
 width: 304px;
 height: 51.5px;
+
 left: 421px;
 top: 1174px;
 
@@ -304,10 +309,6 @@ border-bottom:3px solid #AACE9B;
 
 }
 
-.main-WhyUseTrackgenix > img{
-    margin-top: 44.5px;
-    margin-right: 103px;
-}
 
 .Box{
     position: relative;
@@ -346,5 +347,113 @@ color: #373867;
 
 
 
+.header-Ask > h2{
+    width: 372px;
+    height: 38px;  
+    margin-bottom: 12px;
+    margin-left: 28px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom:3px solid #AACE9B;
+    color: #373867;
+}
+.grom-group {
+  margin-top: 30px;
+  margin-right: 800px;
+  margin-left: 28px;
+
+}
+
+.grom-group > input{
+width: 100%;
+padding: 10px 12px 10px 12px;
+
+background: #FFFFFF;
+border: 2px solid #AACE9B;
+border-radius: 4px;
+}
+
+.grom-group > select{
+width: 100%;
+padding: 10px 12px 10px 12px;
+
+background: #FFFFFF;
+border: 2px solid #AACE9B;
+border-radius: 4px;
+}
+
+.grom-group > textarea{
+    width: 100%;
+padding: 10px 12px 10px 12px;
+
+background: #FFFFFF;
+border: 2px solid #AACE9B;
+border-radius: 4px;
+}
+
+.grom-group > select{
+width: 107%;
+padding: 10px 12px 10px 12px;
+
+background: #FFFFFF;
+border: 2px solid #AACE9B;
+border-radius: 4px;
+    
+}
+
+.SubmitButton > input[type = "submit"]{
+        margin-top: 10px;
+        margin-left: 397px;
+        padding: 14px 36px;
+        background-color: #AACE9B;
+        color: #ffffff;
+        border: none;
+}
+
+.CancelButton > input[type = "submit"]{
+    visibility:hidden !important;    
+}
+
+
+.OurHistoryBox{
+    padding-left: 28px;
+    padding-top: 208px;
+    padding-right: 35px;
+}
+
+.OurHistoryBox > h2{
+    width: 160px;
+    height: 38px;
+    margin-bottom: 12px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom:3px solid #AACE9B;
+    color: #373867;
+}
+
+.OurHistoryBox > img{
+float: right;
+width: 456px;
+height: 256px;
+
+}
+
+.OurHistoryBox > p{
+    margin-top: 45px;
+    width: 560px;
+    height: 292px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    align-items: center;
+
+    color: #373867;
+}
     
 
