@@ -1,31 +1,5 @@
-
-
-::placeholder { 
-    color: gray;
-    opacity: 1;
-  }
-
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
- #optionalstuff{
-    display: none;  
-}
-
-
-#Title{
-    padding-bottom: 32px;
-    border-bottom:3px solid #AACE9B;
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    
-    color: #373867;
-}
-
-
 body{
-    min-height: 3300px;
+    min-height: 3500px;
 }
 
 header{
@@ -34,6 +8,7 @@ header{
     z-index: 1;
     background-color: #AACE9B;
 }
+
 header > img {
     position:absolute;
     width: 45px;
@@ -41,6 +16,7 @@ header > img {
     top: 41px;
     left: 46px;
 }
+
 header > input {
    position: absolute;
    left: 568px;
@@ -58,9 +34,9 @@ aside {
     width:25%;
 }
 
-.aside-Conteiner{
+.aside-Conteiner {
     position: relative;
-    min-height: 3300px;
+    height: 3376px;
     border-right:2px solid gray;
     border-bottom: 2px solid gray;
 }
@@ -72,40 +48,36 @@ aside {
     top: 80px;
 }
 
-.aside-Menu{
-position: absolute;
-width: 100%;
-top: 212px;
-left: 0px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 30px;
-line-height: 35px;
-
-color: #373867;
+.aside-Menu {
+    position: absolute;
+    width: 100%;
+    top: 212px;
+    left: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #373867;
 }
 
 .aside-Menu > ul > li {
-margin-top:72px; 
-border-bottom:  1px solid grey;
-height: 45px;
+    margin-top:72px; 
+    border-bottom:  1px solid grey;
+    height: 45px;
 }
 
 .aside-Menu > ul > li > a {
     position:relative;
     left: 55px;
     bottom: 36px;
-
 }
 
 .aside-Contact {
-position:relative;
-width: 100px;
-left: 55px;
-top: 599px;
-
+    position:relative;
+    width: 100px;
+    left: 55px;
+    top: 599px;
 }
 
 .aside-Contact > h2 {
@@ -118,23 +90,17 @@ top: 599px;
     height: 29px;
     left: 113px;
     top: 680px;
-    text-align: left;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 25px;
-    line-height: 29px;
 }
 
 .aside-Contact > p> img {
-width: 29px;
-height: 29px;
-left: 55px;
-top: 657px;
+    width: 29px;
+    height: 29px;
+    left: 55px;
+    top: 657px;
 }
 
 main{  
-
     position: relative;
     float :left;
     width: 75%;
@@ -149,18 +115,21 @@ h1{
     font-size: 48px;
     line-height: 56px;
     letter-spacing: 0.3em;
-    
+    color: #373867;
+}
+p{
+    font-size: 24px;
+    line-height: 28px;
+    align-items: center;
     color: #373867;
 }
 
 .main-Info >  h1 {
-
-position: relative;
-width: 473px;
-height: 44px;
-left: 28px;
-top: 65px;
-
+    position: relative;
+    width: 473px;
+    height: 44px;
+    left: 28px;
+    top: 65px;
 }
 
 .main-Info >  img {
@@ -170,142 +139,96 @@ top: 65px;
     left: 482px;
     bottom: 35px;
 }
+
 .main-Info >  h2 {
     position: relative;
     width: 612px;
     height: 26px;
     left: 28px;
     top: 109px;
-    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
-    
     color: #AACE9B;
 }
+
 .main-Info > p {
-position: relative;
-width: 617px;
-height: 62px;
-left: 28px;
-top: 172px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-
-color: #373867;
+    position: relative;
+    width: 617px;
+    height: 62px;
+    left: 28px;
+    top: 172px;
 }
 
-.main-Info > input{
-position: relative;
-align-items: center;
-padding: 27px 38px;
-left: 28px;
-bottom: 194px;
-background: #FFFFFF;
-border: 3px solid #AACE9B;
-border-radius: 5px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 15px;
-line-height: 18px;
-text-align: center;
-color: #AACE9B;
-
+.main-Info > input {
+    position: relative;
+    align-items: center;
+    padding: 27px 38px;
+    left: 28px;
+    bottom: 194px;
+    background: #FFFFFF;
+    border: 3px solid #AACE9B;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #AACE9B;
 }
 
-
-.main-Features > h2{
+.main-Features > h2 {
     position: relative;
     width: 127px;
     height: 36px;
     left:28px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    border-bottom:3px solid #AACE9B;
-    color: #373867;
     margin-bottom: 13px;
-
 }
 
-
-.main-Features > article
-{
+.main-Features > article {
     position: relative;
     left: 28px;
     display: inline-block;
     width: 34%;
-
 }
 
-.main-Features > article > img
-{
+.main-Features > article > img {
     width: 91.68px;
     height: 88.91px;
     margin-bottom: 66.8px;
 }
 
-.main-Features > article > p
-{   
+.main-Features > article > p {   
     position: absolute;
     vertical-align: middle;
     top:31px;
     left: 125.74px;
     width: 150px;
     height: 89px;
-
-
-
-
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-    
     color: #373867;
-
 }
 
-
-.box{
+.box {
     width: 100%;
     margin: auto;
 }
 
-
-.main-WhyUseTrackgenix > h2{
-width: 304px;
-height: 51.5px;
-
-left: 421px;
-top: 1174px;
-margin-left: 28px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 38px;
-/* identical to box height */
-
-
-color: #373867;
-border-bottom:3px solid #AACE9B;
-
+.main-WhyUseTrackgenix > h2 {
+    width: 304px;
+    left: 421px;
+    top: 1174px;
+    margin-left: 28px;
 }
 
-
-.why-use-trackgenix-box{
+.why-use-trackgenix-box {
     position: relative;
     border: 10px #cccc;
     padding-left: 24px;
@@ -315,100 +238,85 @@ border-bottom:3px solid #AACE9B;
 }
 
 .why-use-trackgenix-box > img {
-
-    width: 331px;
+     width: 331px;
     height: 241px;
 }
 
-.why-use-trackgenix-box > ul{
+.why-use-trackgenix-box > ul {
     position:absolute;
     left: 458px;
     top:50.71px;
 }
 
-.why-use-trackgenix-box > ul > li{
-padding-left: 32.12px;    
-padding-bottom: 42px;
-list-style-image: url(/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Mayor.png);
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-
-color: #373867;
-
-}
-
-.header-Ask{
-    padding: 28px;
-}
-
-.header-Ask > h2{
-    width: 372px;
-    height: 38px;  
-    margin-bottom: 12px;
+.why-use-trackgenix-box > ul > li {
+    padding-left: 32.12px;    
+    padding-bottom: 42px;
+    list-style-image: url(/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Mayor.png);
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    border-bottom:3px solid #AACE9B;
+    font-size: 24px;
+    line-height: 28px;
     color: #373867;
+}
+
+.header-Ask {
+    padding: 28px;
+}
+
+.header-Ask > h2 {
+    width: 372px;
+    height: 38px;  
+    margin-bottom: 12px;
 }
 
 .ask-group {
   margin-top: 30px;
   margin-right: 50%;
-
 }
 
-
-
-.ask-group > input{
-width: 100%;
-padding: 10px 12px 10px 12px;
-
-background: #FFFFFF;
-border: 2px solid #AACE9B;
-border-radius: 4px;
+.ask-group > input {
+    width: 100%;
+    padding: 10px 12px 10px 12px;
+    background: #FFFFFF;
+    border: 2px solid #AACE9B;
+    border-radius: 4px;
 }
 
-.ask-group > select{
-width: 100%;
-padding: 10px 12px 10px 12px;
-background: #FFFFFF;
-border: 2px solid #AACE9B;
-border-radius: 4px;
+.ask-group > select {
+    width: 100%;
+    padding: 10px 12px 10px 12px;
+    background: #FFFFFF;
+    border: 2px solid #AACE9B;
+    border-radius: 4px;
 }
 
-.ask-group > textarea{
-width: 100%;
-padding: 10px 12px 83px 12px;
-
-background: #FFFFFF;
-border: 2px solid #AACE9B;
-border-radius: 4px;
+.ask-group > textarea {
+    width: 100%;
+    padding: 10px 12px 83px 12px;
+    background: #FFFFFF;
+    border: 2px solid #AACE9B;
+    border-radius: 4px;
 }
 
-.ask-group > select{
-width: 107%;
-padding: 10px 12px 10px 12px;
-background: #FFFFFF;
-border: 2px solid #AACE9B;
-border-radius: 4px;
-    
+.ask-group > select {
+    width: 107%;
+    padding: 10px 12px 10px 12px;
+    background: #FFFFFF;
+    border: 2px solid #AACE9B;
+    border-radius: 4px;
 }
 
-.SubmitButton > input[type = "submit"]{
-        margin-top: 10px;
-        margin-left: 397px;
-        padding: 14px 36px;
-        background-color: #AACE9B;
-        color: #ffffff;
-        border: none;
+.SubmitButton > input[type = "submit"] {
+    margin-top: 10px;
+    margin-left: 397px;
+    padding: 14px 36px;
+    background-color: #AACE9B;
+    color: #ffffff;
+    border: none;
 }
 
-.CancelButton > input[type = "submit"]{
+.CancelButton > input[type = "submit"] {
     position: relative;
     top: 56px;
     left: 255px;
@@ -424,57 +332,39 @@ border-radius: 4px;
     line-height: 18px;
     text-align: center;
     color: #AACE9B;
-
 }
 
 
-.Our-History-Box{
+.Our-History-Box {
     padding-left: 28px;
     padding-top: 208px;
     padding-right: 35px;
 }
 
-.Our-History-Box > h2{
+.Our-History-Box > h2 {
     width: 160px;
     height: 38px;
     margin-bottom: 12px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    border-bottom:3px solid #AACE9B;
-    color: #373867;
 }
 
-.Our-History-Box > img{
-float: right;
-width: 456px;
-height: 256px;
-
+.Our-History-Box > img {
+    float: right;
+    width: 456px;
+    height: 256px;
 }
 
-.Our-History-Box > p{
+.Our-History-Box > p {
     margin-top: 45px;
     width: 560px;
     height: 292px;
-
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-
-    align-items: center;
-
-    color: #373867;
 }
-
 
 .all-Block{
     padding-top: 146px;
     padding-left: 200px;
-   
 }
 
-.Block{
+.Block {
     float:left;
     text-align: center;
     width: 31%;
@@ -482,33 +372,23 @@ height: 256px;
     padding: 10px;
     width: 216px;
     height: 198px;
-
 }
 
-.Block > h2{
+.Block > h2 {
     padding-bottom: 25px;
-
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-
-}
-
-
-.Block > p{
-    padding: 1px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-size: 24px;
-    line-height: 28px;
-    
     color: #373867;
-
 }
 
-footer{
+
+.Block > p  {
+    padding: 1px;
+}
+
+footer {
     position: relative;
     float :left;
     width: 75%;
@@ -518,21 +398,36 @@ footer{
     text-align: center;
 }
 
-.footer-Conteiner{
+.footer-Conteiner {
   padding: 10px;
-
 }
 
-
-.footer-img > img{
+.footer-img > img {
     color: gray;
     width: 29.55px;
     height: 29px;
     padding-top: 56px;
     padding-right: 26px;
     padding-bottom: 40px;
-
-    
 }
     
+#Title{ 
+    padding-bottom: 13px;
+    border-bottom:3px solid #AACE9B;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #373867;
+}
 
+::placeholder { 
+    color: gray;
+    opacity: 1;
+  }
+
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+ #optionalstuff{
+    display: none;  
+}
