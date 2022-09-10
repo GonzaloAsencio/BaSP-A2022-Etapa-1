@@ -1,3 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+    font-family:'Roboto';
+}
+
+p{
+    font-weight: 700;
+    font-family: 'Roboto';
+    font-style: normal;
+    color:#373867;
+}
+
 @media screen and (min-widht:390px) {
 
     .contenedor{
@@ -9,3 +23,22 @@
     }
 
 }
+
+/* ID CONFIGURADOS PARA MOBILE*/
+#Title{
+    margin-left: 30px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #373867;
+    border-bottom: 2px solid #AACE9B;
+}
+
+#Subtitled{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #AACE9B;
+}
+

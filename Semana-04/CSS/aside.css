@@ -4,6 +4,7 @@ aside{
     flex:0 0 397px;
     float:left;
     display:flex;
+    display: none;
     flex-wrap: wrap;
     justify-content:start;
     flex-direction: column;
