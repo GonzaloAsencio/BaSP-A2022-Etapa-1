@@ -16,11 +16,10 @@ header img {
 }
 
 header input{
-    
     margin-right: 120px;
     border-radius: 10px;
     border: 1px solid #AACE9B;
     background: #FAFBFD url("/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Button\ Search.png") no-repeat 5px center;
     background-size: 8px 8px;
-   
 }
+
