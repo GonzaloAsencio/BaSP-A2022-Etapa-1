@@ -37,5 +37,10 @@ The following technologies are currently being used:
  [style.css](https://github.com/GonzaloAsencio/BaSP-A2022-Etapa-1/blob/master/Semana-03/CSS/style.css) I made all the styles for Trackgenix page.
 >
 ***
+ ### __Week 04__
+*** 
+>First, I Separate all the components of the styles.css file.Then I create mobile,tablet and desktop version of the trackgenix page.
+>
+***
 ***
 *Made by Gonzalo Asencio*

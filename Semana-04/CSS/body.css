@@ -1,0 +1,11 @@
+@media screen and (min-widht:390px) {
+
+    .contenedor{
+        width: 390px;
+        max-height:1704px;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+}

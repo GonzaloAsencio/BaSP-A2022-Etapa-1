@@ -1,0 +1,10 @@
+aside{
+    background-color: brown;
+    height: 100%;
+    flex:0 0 397px;
+    float:left;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    flex-direction: column;
+}
