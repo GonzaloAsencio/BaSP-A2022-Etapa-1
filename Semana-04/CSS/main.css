@@ -2,6 +2,8 @@ main{
     background-color: #ffffff;
     flex: 1;
     height: 100%;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #AACE9B;
 }
 
 /* -----------------------------[Main Info]------------------------------------------------ */
