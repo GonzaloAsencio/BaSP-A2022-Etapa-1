@@ -6,6 +6,7 @@ footer{
     flex-direction: column;
     align-content: center;
     align-items: center;
+    border-top: 3px solid #AACE9B;
 
 }
 
@@ -17,9 +18,22 @@ footer{
 }
 
 footer > p {
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-text-align: center;
-color: #373867;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #373867;
+}
+
+@media   (min-width : 834px) and (max-width : 1512px){
+    .footer-img> img {
+        height: 30px;
+        width: 29px;
+    }
+
+    footer > p {
+        font-size: 24px;
+        line-height: 28px;
+    }
+  
 }

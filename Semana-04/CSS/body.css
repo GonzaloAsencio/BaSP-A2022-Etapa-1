@@ -6,28 +6,21 @@ body{
 }
 
 p{
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
     font-family: 'Roboto';
     font-style: normal;
     color:#373867;
 }
 
-
-@media (min-width : 390px){
-  
-.contenedor{
-    width: 390px;
-    max-height:1704px;
-    margin: auto;
-    display: flex;
-    flex-flow: row wrap;
-    
-}
+h1{
+    font-size: 40px;
+    line-height: 47px;
 }
 
 /* ID CONFIGURADOS PARA MOBILE*/
 #Title{
-    margin-left: 30px;
     padding-bottom: 5px;
     font-size: 14px;
     font-weight: 700;
@@ -42,4 +35,48 @@ p{
     line-height: 16px;
     color: #AACE9B;
 }
+
+@media   (min-width : 389px) and (max-width : 833px){
+  
+    .contenedor{
+        
+        width:100%;
+        max-height:1704px;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        
+    }
+}
+
+@media   (min-width : 834px) and (max-width : 1512px){
+  
+    .contenedor{
+        max-height:3109px; 
+    }
+
+    h1{
+        font-size: 68px;
+        line-height: 80px;
+    }
+
+    p{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    #Title{
+        font-size: 32px;
+        line-height: 38px;
+        border-bottom: 3px solid #AACE9B;
+    }
+    
+    #Subtitled{
+        font-size: 21px;
+        line-height: 25px;
+     
+    }
+}
+
+
+
 

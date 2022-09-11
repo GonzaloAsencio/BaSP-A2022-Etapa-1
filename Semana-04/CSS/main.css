@@ -1,24 +1,29 @@
 main{
     background-color: #ffffff;
-    flex: 1;
+   /* flex: 1;*/
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     height: 100%;
     padding-bottom: 25px;
-    border-bottom: 3px solid #AACE9B;
+}
+.main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
+    margin: 10px;
 }
 
 /* -----------------------------[Main Info]------------------------------------------------ */
 .main-Info{
     display: flex;
-    flex-direction: row;
+    justify-content:center;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     padding-bottom: 40px;
 }
 
 .main-Info > h1{
     padding: 5px 73px 5px 73px;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 47px;
     color: #373867;
     order: 1;
 }
@@ -42,15 +47,27 @@ main{
     padding: 5px 53px 0 54px;
     text-align: center;
     order: 4;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
 }
 
 .main-Info > input{
     display: none;
     order: 5;
 }
+
+@media   (min-width : 834px) and (max-width : 1512px){
+
+    .main-Info > img {
+        width: 196px;
+        height: 226px;
+    }
+    .main-Info > p{
+        width: 562px;
+        height: 120px;
+    }
+    
+}
+
+/* -----------------------------[Main Features]------------------------------------------------ */
 
 .main-Features {
     display: flex;
@@ -64,12 +81,13 @@ main{
 .main-Article-Conteiner{
     display:flex;
     flex-wrap: wrap;
-    padding: 10px 65px 0 30px;
+    margin-top: 10px;
 }
 
 .main-Article-Conteiner > article {
     display: flex;
     justify-content: center;
+    flex-basis: 100px;
     padding-bottom: 30px;
 }
 
@@ -84,14 +102,35 @@ main{
     padding: 10px 5px 1px 5px;
     width: 85px;
     height: 30px;
-    font-size: 12px;
-    line-height: 14px;
+    font-weight: 700;
 }
+
+
+@media   (min-width : 834px) and (max-width : 1512px){
+    .main-Features > h2 {
+        width: 127px;
+    }
+
+    .main-Article-Conteiner > article > img {
+        width: 91.68px;
+        height: 88.91px;
+    }
+
+    .main-Article-Conteiner > article {
+        justify-content: flex-start;
+        flex-basis: 400px;
+    }
+    .main-Article-Conteiner >article >  p {
+        padding: 10px 0px 0px  71px;
+        
+    }
+    
+}
+
 /* -----------------------------[Why use Trackgenix]------------------------------------------------ */
 .main-WhyUseTrackgenix{
    display: flex;
    flex-direction: column;
-   padding-bottom: 25px;
 }
 
 .main-WhyUseTrackgenix > h2{
@@ -119,7 +158,7 @@ ul{
 
  li{
     list-style: none;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 12px;
     line-height: 14px;
     color: #373867;
@@ -134,13 +173,38 @@ ul{
     background-repeat: no-repeat;
   }
 
+  @media   (min-width : 834px) and (max-width : 1512px){
+    .main-WhyUseTrackgenix > h2{
+        width: 381px;
+        height: 33px;
+     }
+
+     .why-use-trackgenix-box {
+        padding:30px 110px 25px 10px;
+     }
+    
+     .why-use-trackgenix-box > img{
+        width: 299.81px;
+        height: 210.14px;
+     }
+     ul{
+        justify-content: space-evenly ;
+        padding-left: 10px;
+        }
+
+    li{
+        font-size: 24px;
+        line-height: 28px
+    }
+    
+}
+
   /* -----------------------------[ASK]------------------------------------------------ */
 
   .main-Ask {
     display:flex;
     flex-direction: column;
     align-content: flex-start;
-    padding-bottom: 24px;
   }
 
   .main-Ask > h2{
@@ -149,9 +213,9 @@ ul{
   }
 
   .ask-Group-Box{
-   margin:15px 30px 0px 60px;
    display: flex;
    flex-direction: column;
+   padding: 15px;
   }
 
   .ask-Group-Box > .ask-Group{
@@ -159,26 +223,26 @@ ul{
     
   }
   .ask-Group-Box > .ask-Group > input{
-    width: 91%;
+    width:83%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
   }
 
   .ask-Group-Box > .ask-Group > select {
-    width: 100%;
+   width:90%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
 .ask-Group-Box > .ask-Group > select {
-    width: 100%;
+ 
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
 .ask-Group-Box > .ask-Group > textarea {
-    width: 100%;
+    width: 90%;
     height: 97px;
     box-sizing: border-box;
     border: 1px solid #AACE9B;
@@ -188,6 +252,7 @@ ul{
 .ask-Group-Button{
    display: flex;
    justify-content: flex-end;
+   margin-right: 34px;
 }
 
 .SubmitButton > input[type = "submit"] {
@@ -211,13 +276,22 @@ ul{
     border-radius: 5px; 
 }
 
+@media   (min-width : 834px) and (max-width : 1512px){
+    .main-Ask > h2 {
+        width: 381px;
+        height: 33px;
+      }
+      .ask-Group-Box > .ask-Group > input{
+        width:87%;
+      }
+}
+
 /* -----------------------------[Our History]------------------------------------------------ */
 
 .main-Our-History > h2{
     width: 78px;
     height: 14px;
 }
-
 
 .Our-History-Box{
    display: flex;
@@ -226,12 +300,10 @@ ul{
    margin: 28px 30px;
 }
 
+
 .Our-History-Box > p{
-   order: 0;
-   width: 331px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    order: 0;
+    width: 331px;
     text-align: justify;
  }
 
@@ -241,6 +313,26 @@ ul{
     width: 285px;
     height: 155px;
   }
+
+  @media   (min-width : 834px) and (max-width : 1512px){
+    
+    .main-Our-History > h2{
+        width: 244px;
+        height: 33px;
+    }
+
+    .Our-History-Box > p{
+        width: 742px;
+     
+     }
+     .mobile-Our-History-Box {
+        display: none;
+     }
+     .Our-History-Box > img{
+        width: 318px;
+        height: 142px;
+    }
+}
 
 /* -----------------------------[main-all-Block]------------------------------------------------ */
 .main-all-Block{
@@ -283,3 +375,25 @@ ul{
     font-size: 12px;
     line-height: 14px;
  }
+
+ @media   (min-width : 834px) and (max-width : 1512px){
+    
+    .Block >P {
+        font-size: 24px;
+        line-height: 28px;
+     }
+     .Block > h2{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+     }
+     .final-Block >P {
+        font-size: 24px;
+        line-height: 28px;
+     }
+     .final-Block >h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+     }
+}
