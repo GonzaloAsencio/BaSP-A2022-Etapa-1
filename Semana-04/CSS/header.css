@@ -23,3 +23,20 @@ header input{
     background-size: 8px 8px;
 }
 
+@media   (min-width : 1512px){
+
+header{
+        height: 126px;    
+    }
+    header img {
+        display: none;
+    }
+    header input{
+        width: 377px;
+        height: 36px;
+        border-radius: 50px;
+        background: #FAFBFD url("/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Button\ Search.png") no-repeat 14px center;
+        background-size: 20px 20px;
+    }
+
+}

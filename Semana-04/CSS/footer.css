@@ -25,7 +25,7 @@ footer > p {
     color: #373867;
 }
 
-@media   (min-width : 834px) and (max-width : 1512px){
+@media (min-width : 834px) and (max-width : 1512px){
     .footer-img> img {
         height: 30px;
         width: 29px;

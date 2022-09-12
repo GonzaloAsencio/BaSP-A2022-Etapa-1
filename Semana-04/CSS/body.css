@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body{
-    font-family:'Roboto';
+    font-family:'Roboto', sans-serif;
 }
 
 p{
@@ -17,6 +17,15 @@ p{
 h1{
     font-size: 40px;
     line-height: 47px;
+}
+.contenedor{
+        
+    width:100%;
+    max-height:1704px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    
 }
 
 /* ID CONFIGURADOS PARA MOBILE*/
@@ -36,20 +45,14 @@ h1{
     color: #AACE9B;
 }
 
-@media   (min-width : 389px) and (max-width : 833px){
+@media   (min-width : 390px) and (max-width : 833px){
   
     .contenedor{
-        
-        width:100%;
-        max-height:1704px;
-        margin: auto;
-        display: flex;
-        flex-flow: row wrap;
-        
+        max-height:1704px;  
     }
 }
 
-@media   (min-width : 834px) and (max-width : 1512px){
+@media   (min-width : 834px) and (max-width : 1511px){
   
     .contenedor{
         max-height:3109px; 
@@ -75,6 +78,36 @@ h1{
         line-height: 25px;
      
     }
+}
+
+@media   (min-width : 1512px){
+
+    .contenedor{
+        height: 100%;
+        max-height:3500px;      
+    }
+
+    h1{
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    p{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    #Title{
+        font-size: 30px;
+        line-height: 35px;
+        border-bottom: 3px solid #AACE9B;
+    }
+    
+    #Subtitled{
+        font-size: 24px;
+        line-height: 28px;
+     
+    }
+
 }
 
 

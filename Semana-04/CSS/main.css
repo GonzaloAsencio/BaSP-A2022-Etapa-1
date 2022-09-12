@@ -1,15 +1,25 @@
 main{
     background-color: #ffffff;
-   /* flex: 1;*/
+    flex: 1;
+    /*
     display: flex;
     flex-direction: column;
     margin: auto;
     height: 100%;
     padding-bottom: 25px;
+    */
 }
 .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
     margin: 10px;
 }
+
+@media   (min-width :1512px) {
+    .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
+        margin: 24px;
+    }
+    
+}
+
 
 /* -----------------------------[Main Info]------------------------------------------------ */
 .main-Info{
@@ -51,10 +61,16 @@ main{
 
 .main-Info > input{
     display: none;
+    margin-top: 36px;
+    align-items: center;
+    padding: 14px 36px;
+    background: #FFFFFF;
+    border: 3px solid #AACE9B;
+    border-radius: 5px;
     order: 5;
 }
 
-@media   (min-width : 834px) and (max-width : 1512px){
+@media   (min-width : 834px) and (max-width : 1511px){
 
     .main-Info > img {
         width: 196px;
@@ -63,6 +79,40 @@ main{
     .main-Info > p{
         width: 562px;
         height: 120px;
+    }
+
+    
+}
+
+@media   (min-width :1512px) {
+    .main-Info{
+        padding-left: 28px;
+        align-items: flex-start;
+        padding-bottom: 40px;
+    }
+    .main-Info > h1{
+        padding: 65px 0px 0px 0px;
+    }
+    .main-Info > h2[id = "Subtitled"] {
+        padding: 37px 0px 0px 0px;
+    }
+    .main-Info > p{
+        width: 570px;
+        height: 62px;
+        padding: 38px 0px 0 0px;
+        text-align: center;
+        order: 3;
+    }
+
+    .main-Info > img{
+        width: 458px;
+        height: 449px;
+        align-self: flex-end;
+        order: 5;
+    }
+    .main-Info > input{
+         display: revert;
+         order: 4;
     }
     
 }
@@ -127,6 +177,16 @@ main{
     
 }
 
+@media   (min-width : 1512px) {
+
+    .main-Article-Conteiner >article >  p {
+        width: 200px;
+    }
+   
+}
+    
+
+
 /* -----------------------------[Why use Trackgenix]------------------------------------------------ */
 .main-WhyUseTrackgenix{
    display: flex;
@@ -156,7 +216,7 @@ ul{
     padding-left: 10px;
 }
 
- li{
+li{
     list-style: none;
     font-weight: 700;
     font-size: 12px;
@@ -173,7 +233,7 @@ ul{
     background-repeat: no-repeat;
   }
 
-  @media   (min-width : 834px) and (max-width : 1512px){
+  @media   (min-width : 834px) and (max-width : 1511px){
     .main-WhyUseTrackgenix > h2{
         width: 381px;
         height: 33px;
@@ -187,16 +247,35 @@ ul{
         width: 299.81px;
         height: 210.14px;
      }
-     ul{
+     .why-use-trackgenix-box > ul{
         justify-content: space-evenly ;
         padding-left: 10px;
         }
 
-    li{
+        .why-use-trackgenix-box > ul > li{
         font-size: 24px;
         line-height: 28px
     }
-    
+}
+@media   (min-width : 1512px) {
+
+    .main-WhyUseTrackgenix > h2{
+        width: 304px;
+        height: 38px;
+     }
+     .why-use-trackgenix-box {
+        padding:30px 242px 117px 10px;
+     }
+     .why-use-trackgenix-box > img{
+        width: 331px;
+        height: 241px;
+     }
+
+    li{
+        font-size: 24px;
+        line-height: 28px;
+    }
+   
 }
 
   /* -----------------------------[ASK]------------------------------------------------ */
@@ -230,17 +309,12 @@ ul{
   }
 
   .ask-Group-Box > .ask-Group > select {
-   width:90%;
+    width:90%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
-.ask-Group-Box > .ask-Group > select {
- 
-    padding: 10px 12px;
-    border: 1px solid #AACE9B;
-    border-radius: 4px;
-}
+
 .ask-Group-Box > .ask-Group > textarea {
     width: 90%;
     height: 97px;
@@ -276,7 +350,7 @@ ul{
     border-radius: 5px; 
 }
 
-@media   (min-width : 834px) and (max-width : 1512px){
+@media   (min-width : 834px) and (max-width : 1511px){
     .main-Ask > h2 {
         width: 381px;
         height: 33px;
@@ -285,6 +359,48 @@ ul{
         width:87%;
       }
 }
+
+@media   (min-width : 1512px) {
+    .main-Ask > h2{
+        width: 372px;
+        height: 38px;
+      }
+
+      .ask-Group-Box > .ask-Group > input{
+        width:623px;
+        padding: 10px 12px;
+        border: 1px solid #AACE9B;
+        border-radius: 4px;
+      }
+    
+      .ask-Group-Box > .ask-Group > select {
+        width:649px;
+        padding: 10px 12px;
+        border: 1px solid #AACE9B;
+        border-radius: 4px;
+    }
+    
+    .ask-Group-Box > .ask-Group > textarea {
+        width: 649px;
+        height: 203px;
+        box-sizing: border-box;
+        border: 1px solid #AACE9B;
+        border-radius: 4px;
+    }
+
+    .ask-Group-Button  {
+        margin-right: 398px;
+    }
+
+    .SubmitButton > input[type = "submit"] {
+        padding: 14px 36px;
+    }
+    
+    .CancelButton > input[type = "submit"] {
+        padding: 14px 36px;
+    }
+
+}    
 
 /* -----------------------------[Our History]------------------------------------------------ */
 
@@ -314,7 +430,7 @@ ul{
     height: 155px;
   }
 
-  @media   (min-width : 834px) and (max-width : 1512px){
+  @media   (min-width : 834px) and (max-width : 1511px){
     
     .main-Our-History > h2{
         width: 244px;
@@ -331,6 +447,31 @@ ul{
      .Our-History-Box > img{
         width: 318px;
         height: 142px;
+    }
+}
+
+@media   (min-width : 1512px){
+    
+    .main-Our-History > h2{
+        width: 160px;
+        height: 38px;
+    }
+    .Our-History-Box {
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 44px;
+       
+     }
+
+    .Our-History-Box > p{
+        width: 560px;
+     }
+     .mobile-Our-History-Box {
+        display: none;
+     }
+     .Our-History-Box > img{
+        width: 456px;
+        height: 256px;
     }
 }
 
@@ -396,4 +537,14 @@ ul{
         font-size: 24px;
         line-height: 28px;
      }
+}
+
+@media   (min-width : 1512) {
+    
+    .main-all-Block{
+        justify-content:space-between;
+        padding-right: 140px;
+       
+      
+    }
 }
