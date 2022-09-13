@@ -1,5 +1,7 @@
 aside{
+  
     display: none;
+   
     /*
     height: 100%;
     float:left;
@@ -24,7 +26,7 @@ aside{
 
 }
 .aside-Menu> ul{
- 
+    padding-left: 0px;
 }
 .aside-Menu > ul > li{
     padding-left: 55px;
@@ -36,7 +38,6 @@ aside{
     line-height: 35px;
     color: #373867;
 }
-
 .aside-Contact> h2{
     width: 100px;
     margin-left: 55px;

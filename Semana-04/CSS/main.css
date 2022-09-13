@@ -13,6 +13,13 @@ main{
     margin: 10px;
 }
 
+@media   (min-width :834px) {
+    .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
+        margin: 39px;
+    }
+    
+}
+
 @media   (min-width :1512px) {
     .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
         margin: 24px;
@@ -26,7 +33,6 @@ main{
     display: flex;
     justify-content:center;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     padding-bottom: 40px;
 }
@@ -39,14 +45,13 @@ main{
 }
 
 .main-Info > h2[id = "Subtitled"] {
-   padding: 5px 58px 0px 67px;
    order:2;
 }
 
 .main-Info > img {
     width: 155px;
     height: 144px;
-    margin:5px 117px 0 118px;
+    margin:5px;
     order: 3;
 
 }
@@ -54,7 +59,6 @@ main{
 .main-Info > p{
     width: 283px;
     height: 42px;
-    padding: 5px 53px 0 54px;
     text-align: center;
     order: 4;
 }
@@ -64,6 +68,7 @@ main{
     margin-top: 36px;
     align-items: center;
     padding: 14px 36px;
+    color: #AACE9B;
     background: #FFFFFF;
     border: 3px solid #AACE9B;
     border-radius: 5px;
@@ -75,6 +80,7 @@ main{
     .main-Info > img {
         width: 196px;
         height: 226px;
+        margin: 14px;
     }
     .main-Info > p{
         width: 562px;
@@ -88,7 +94,7 @@ main{
     .main-Info{
         padding-left: 28px;
         align-items: flex-start;
-        padding-bottom: 40px;
+        padding-bottom: 230px;
     }
     .main-Info > h1{
         padding: 65px 0px 0px 0px;
@@ -99,14 +105,17 @@ main{
     .main-Info > p{
         width: 570px;
         height: 62px;
-        padding: 38px 0px 0 0px;
+        padding-top: 38px;
         text-align: center;
         order: 3;
     }
 
     .main-Info > img{
+        position:absolute;
         width: 458px;
         height: 449px;
+        bottom: 240px;
+        right: 34px;
         align-self: flex-end;
         order: 5;
     }
@@ -120,8 +129,8 @@ main{
 /* -----------------------------[Main Features]------------------------------------------------ */
 
 .main-Features {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
 }
 
 .main-Features > h2 {
@@ -168,11 +177,11 @@ main{
 
     .main-Article-Conteiner > article {
         justify-content: flex-start;
-        flex-basis: 400px;
+        flex-basis: 370px;
     }
     .main-Article-Conteiner >article >  p {
-        padding: 10px 0px 0px  71px;
-        
+        width: 140px;
+        padding: 10px 0px 0px  71px;    
     }
     
 }
@@ -189,8 +198,8 @@ main{
 
 /* -----------------------------[Why use Trackgenix]------------------------------------------------ */
 .main-WhyUseTrackgenix{
-   display: flex;
-   flex-direction: column;
+  /* display: flex;
+   flex-direction: column;*/
 }
 
 .main-WhyUseTrackgenix > h2{
@@ -201,7 +210,7 @@ main{
  .why-use-trackgenix-box{
     display:flex;
    justify-content: space-between;
-   padding:10px 30px 25px 10px;
+   padding:10px 12px 25px 10px;
  }
 
 .why-use-trackgenix-box > img{
@@ -224,23 +233,24 @@ li{
     color: #373867;
  }
 
- li::before {
+ .why-use-trackgenix-box > ul > li::before {
     content: '';
     display: inline-block;
-    height: 15px;
+    height: 11px;
     width: 15px;
     background-image: url(/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Mayor.png);
+    background-size: 6px 12px;
     background-repeat: no-repeat;
   }
 
   @media   (min-width : 834px) and (max-width : 1511px){
     .main-WhyUseTrackgenix > h2{
-        width: 381px;
+        width: 304px;
         height: 33px;
      }
 
      .why-use-trackgenix-box {
-        padding:30px 110px 25px 10px;
+        padding:30px 37px 25px 10px;
      }
     
      .why-use-trackgenix-box > img{
@@ -256,6 +266,11 @@ li{
         font-size: 24px;
         line-height: 28px
     }
+
+    .why-use-trackgenix-box > ul > li::before{
+        height: 14px;
+        background-size: 8px 12px;
+      }
 }
 @media   (min-width : 1512px) {
 
@@ -275,15 +290,20 @@ li{
         font-size: 24px;
         line-height: 28px;
     }
+    .why-use-trackgenix-box > ul > li::before {
+        height: 17px;
+        background-size: 9px 15px;
+      }
    
 }
 
   /* -----------------------------[ASK]------------------------------------------------ */
 
   .main-Ask {
+    /*
     display:flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-content: flex-start;*/
   }
 
   .main-Ask > h2{
@@ -302,21 +322,24 @@ li{
     
   }
   .ask-Group-Box > .ask-Group > input{
-    width:83%;
+    max-width: 300px;
+    width:100%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
   }
 
   .ask-Group-Box > .ask-Group > select {
-    width:90%;
+    max-width: 325px;
+    width:100%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
 
 .ask-Group-Box > .ask-Group > textarea {
-    width: 90%;
+    max-width: 325px;
+    width:100%;
     height: 97px;
     box-sizing: border-box;
     border: 1px solid #AACE9B;
@@ -356,38 +379,32 @@ li{
         height: 33px;
       }
       .ask-Group-Box > .ask-Group > input{
-        width:87%;
+         max-width: 700px;
       }
+      .ask-Group-Box > .ask-Group > select {
+        max-width: 725px;
+    }
+        .ask-Group-Box > .ask-Group > textarea {
+        max-width: 725px;
+    }
+    
 }
 
-@media   (min-width : 1512px) {
+@media  (min-width : 1512px) {
     .main-Ask > h2{
         width: 372px;
         height: 38px;
       }
-
       .ask-Group-Box > .ask-Group > input{
-        width:623px;
-        padding: 10px 12px;
-        border: 1px solid #AACE9B;
-        border-radius: 4px;
+        max-width: 623px;
       }
-    
       .ask-Group-Box > .ask-Group > select {
-        width:649px;
-        padding: 10px 12px;
-        border: 1px solid #AACE9B;
-        border-radius: 4px;
-    }
-    
+        max-width: 649px;
+        }
     .ask-Group-Box > .ask-Group > textarea {
-        width: 649px;
+        max-width: 649px;
         height: 203px;
-        box-sizing: border-box;
-        border: 1px solid #AACE9B;
-        border-radius: 4px;
     }
-
     .ask-Group-Button  {
         margin-right: 398px;
     }
@@ -433,12 +450,20 @@ li{
   @media   (min-width : 834px) and (max-width : 1511px){
     
     .main-Our-History > h2{
-        width: 244px;
+        width: 170px;
         height: 33px;
     }
 
+    .Our-History-Box {
+        padding-bottom: 109px;
+     
+     }
     .Our-History-Box > p{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
         width: 742px;
+        text-align: center;
      
      }
      .mobile-Our-History-Box {
@@ -457,7 +482,8 @@ li{
         height: 38px;
     }
     .Our-History-Box {
-        flex-direction: column;
+        margin: 0px;
+        flex-direction: row;
         justify-content: space-between;
         padding-bottom: 44px;
        
@@ -528,6 +554,10 @@ li{
         font-size: 24px;
         line-height: 28px;
      }
+
+     .Block :nth-child(1){
+       padding-right: 42px;
+     }
      .final-Block >P {
         font-size: 24px;
         line-height: 28px;
@@ -539,12 +569,16 @@ li{
      }
 }
 
-@media   (min-width : 1512) {
+@media  (min-width : 1512) {
     
     .main-all-Block{
-        justify-content:space-between;
+        justify-content:space-around;
         padding-right: 140px;
-       
-      
     }
+
+    .Block :nth-child(1){
+        padding-right: 42px;
+    }
+
+
 }

@@ -19,13 +19,13 @@ h1{
     line-height: 47px;
 }
 .contenedor{
-        
+    /*    
     width:100%;
     max-height:1704px;
     margin: auto;
     display: flex;
     flex-flow: row wrap;
-    
+    */
 }
 
 /* ID CONFIGURADOS PARA MOBILE*/
@@ -68,6 +68,7 @@ h1{
         line-height: 35px;
     }
     #Title{
+        padding-bottom: 15px;
         font-size: 32px;
         line-height: 38px;
         border-bottom: 3px solid #AACE9B;
@@ -106,6 +107,15 @@ h1{
         font-size: 24px;
         line-height: 28px;
      
+    }
+    .contenedor{
+          
+        width:100%;
+        max-height:1704px;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        
     }
 
 }
