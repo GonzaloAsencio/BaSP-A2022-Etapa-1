@@ -7,17 +7,16 @@ footer{
     align-content: center;
     align-items: center;
     border-top: 3px solid #AACE9B;
-
 }
 
-.footer-img> img {
+.footer-img> img{
     height: 15px;
     width: 14px;
     margin-top: 15px;
     margin-bottom: 6px;
 }
 
-footer > p {
+footer > p{
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
@@ -25,15 +24,14 @@ footer > p {
     color: #373867;
 }
 
-@media (min-width : 834px) and (max-width : 1512px){
-    .footer-img> img {
+@media  (min-width : 834px) and (max-width : 1512px){
+
+    .footer-img> img{
         height: 30px;
         width: 29px;
     }
-
-    footer > p {
+    footer > p{
         font-size: 24px;
         line-height: 28px;
     }
-  
 }

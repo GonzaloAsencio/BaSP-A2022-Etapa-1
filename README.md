@@ -39,7 +39,7 @@ The following technologies are currently being used:
 ***
  ### __Week 04__
 *** 
->First, I Separate all the components of the styles.css file.Then I create mobile,tablet and desktop version of the trackgenix page.
+>First, I separate all the components of the style.css in different scripts.Then I created a mobile, tablet and desktop version of the trackgenix page with media queries.
 >
 ***
 ***

@@ -1,29 +1,13 @@
 aside{
-  
     display: none;
-   
-    /*
-    height: 100%;
-    float:left;
-    flex:0 0 397px;
-    /*
-    display:flex;
-    display: none;
-    flex-wrap: wrap;
-    justify-content:start;
-    flex-direction: column;
-    flex:0 0 397px;*/
 }
-
 .aside-Conteiner> h2{
     width: 100px;
     padding-top: 70px;
     margin-left: 55px;
-
 }
 .aside-Menu{
     padding-top: 80px;
-
 }
 .aside-Menu> ul{
     padding-left: 0px;
@@ -43,32 +27,29 @@ aside{
     margin-left: 55px;
     padding-top: 36px;
 }
-
-.aside-Contact-Box  {
+.aside-Contact-Box{
     padding: 30px 20px 20px 55px;
 
 }
-.aside-Contact-Box > p {
+.aside-Contact-Box > p{
     font-weight: 400;
     font-size: 25px;
     line-height: 29px;
 }
-
 .aside-Contact-Box > p > img{
     padding-right: 29px;
     width: 29px;
     height: 29px;
 }
 
-@media   (min-width : 1512px){
+@media  (min-width : 1512px){
    aside{
-    display:contents;
+        display:contents;
    }
    .aside-Conteiner{
-    background-color: rgb(255, 255, 255);
-    border-right: 3px solid #CDCCCC;
-    float:left;
-    flex:0 0 397px;
+        background-color: rgb(255, 255, 255);
+        border-right: 3px solid #CDCCCC;
+        float:left;
+        flex:0 0 397px;
    }
-
 }

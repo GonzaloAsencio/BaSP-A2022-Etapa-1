@@ -1,34 +1,26 @@
 main{
-    background-color: #ffffff;
     flex: 1;
-    /*
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    height: 100%;
-    padding-bottom: 25px;
-    */
+    background-color: #ffffff;
 }
 .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
     margin: 10px;
 }
 
 @media   (min-width :834px) {
+
     .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
         margin: 39px;
     }
     
 }
-
 @media   (min-width :1512px) {
+
     .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
         margin: 24px;
     }
     
 }
 
-
-/* -----------------------------[Main Info]------------------------------------------------ */
 .main-Info{
     display: flex;
     justify-content:center;
@@ -36,48 +28,40 @@ main{
     align-items: center;
     padding-bottom: 40px;
 }
-
 .main-Info > h1{
     padding: 5px 73px 5px 73px;
-    font-weight: 700;
-    color: #373867;
     order: 1;
 }
-
 .main-Info > h2[id = "Subtitled"] {
    order:2;
 }
-
-.main-Info > img {
+.main-Info > img{
     width: 155px;
     height: 144px;
     margin:5px;
     order: 3;
-
 }
-
 .main-Info > p{
     width: 283px;
     height: 42px;
     text-align: center;
     order: 4;
 }
-
 .main-Info > input{
     display: none;
-    margin-top: 36px;
     align-items: center;
+    order: 5;
+    margin-top: 36px;
     padding: 14px 36px;
     color: #AACE9B;
     background: #FFFFFF;
     border: 3px solid #AACE9B;
     border-radius: 5px;
-    order: 5;
 }
 
 @media   (min-width : 834px) and (max-width : 1511px){
 
-    .main-Info > img {
+    .main-Info > img{
         width: 196px;
         height: 226px;
         margin: 14px;
@@ -85,31 +69,29 @@ main{
     .main-Info > p{
         width: 562px;
         height: 120px;
-    }
-
-    
+    }  
 }
 
-@media   (min-width :1512px) {
+@media   (min-width :1512px) and (max-width : 1550px) {
+
     .main-Info{
-        padding-left: 28px;
         align-items: flex-start;
+        padding-left: 28px;
         padding-bottom: 230px;
     }
     .main-Info > h1{
         padding: 65px 0px 0px 0px;
     }
-    .main-Info > h2[id = "Subtitled"] {
+    .main-Info > h2[id = "Subtitled"]{
         padding: 37px 0px 0px 0px;
     }
     .main-Info > p{
         width: 570px;
         height: 62px;
+        order: 3;
         padding-top: 38px;
         text-align: center;
-        order: 3;
     }
-
     .main-Info > img{
         position:absolute;
         width: 458px;
@@ -120,120 +102,87 @@ main{
         order: 5;
     }
     .main-Info > input{
-         display: revert;
-         order: 4;
-    }
-    
+        display: revert;
+        order: 4;
+    }  
 }
-
-/* -----------------------------[Main Features]------------------------------------------------ */
-
-.main-Features {
-    /*display: flex;
-    flex-direction: column;*/
-}
-
-.main-Features > h2 {
+.main-Features > h2{
     width: 55px;
 }
-
 .main-Article-Conteiner{
     display:flex;
     flex-wrap: wrap;
     margin-top: 10px;
 }
-
-.main-Article-Conteiner > article {
+.main-Article-Conteiner > article{
     display: flex;
     justify-content: center;
     flex-basis: 100px;
     padding-bottom: 30px;
 }
-
-
 .main-Article-Conteiner > article > img{
     width: 40px;
     height: 40px;
-
 }
-
-.main-Article-Conteiner >article >  p {
+.main-Article-Conteiner >article >  p{
     padding: 10px 5px 1px 5px;
     width: 85px;
     height: 30px;
     font-weight: 700;
 }
 
+@media  (min-width : 834px) and (max-width : 1512px){
 
-@media   (min-width : 834px) and (max-width : 1512px){
-    .main-Features > h2 {
+    .main-Features > h2{
         width: 127px;
     }
-
-    .main-Article-Conteiner > article > img {
+     .main-Article-Conteiner > article > img{
         width: 91.68px;
         height: 88.91px;
     }
-
-    .main-Article-Conteiner > article {
+    .main-Article-Conteiner > article{
         justify-content: flex-start;
         flex-basis: 370px;
     }
-    .main-Article-Conteiner >article >  p {
+    .main-Article-Conteiner >article >  p{
         width: 140px;
         padding: 10px 0px 0px  71px;    
     }
-    
 }
-
 @media   (min-width : 1512px) {
-
-    .main-Article-Conteiner >article >  p {
+    
+    .main-Article-Conteiner >article >  p{
         width: 200px;
     }
-   
 }
     
-
-
-/* -----------------------------[Why use Trackgenix]------------------------------------------------ */
-.main-WhyUseTrackgenix{
-  /* display: flex;
-   flex-direction: column;*/
-}
-
 .main-WhyUseTrackgenix > h2{
     width: 133px;
     height: 16px;
  }
-
- .why-use-trackgenix-box{
+.why-use-trackgenix-box{
     display:flex;
-   justify-content: space-between;
-   padding:10px 12px 25px 10px;
+    justify-content: space-between;
+    padding:10px 12px 25px 10px;
  }
-
 .why-use-trackgenix-box > img{
     width: 130px;
     height: 95px;
- }
-
+}
 ul{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 10px;
 }
-
 li{
     list-style: none;
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
     color: #373867;
- }
-
- .why-use-trackgenix-box > ul > li::before {
+}
+.why-use-trackgenix-box > ul > li::before{
     content: '';
     display: inline-block;
     height: 11px;
@@ -241,39 +190,37 @@ li{
     background-image: url(/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Mayor.png);
     background-size: 6px 12px;
     background-repeat: no-repeat;
-  }
+}
 
-  @media   (min-width : 834px) and (max-width : 1511px){
+@media  (min-width : 834px) and (max-width : 1511px){
+
     .main-WhyUseTrackgenix > h2{
         width: 304px;
         height: 33px;
-     }
-
-     .why-use-trackgenix-box {
+    }
+    .why-use-trackgenix-box{
         padding:30px 37px 25px 10px;
      }
-    
-     .why-use-trackgenix-box > img{
+    .why-use-trackgenix-box > img{
         width: 299.81px;
         height: 210.14px;
-     }
+    }
      .why-use-trackgenix-box > ul{
         justify-content: space-evenly ;
         padding-left: 10px;
-        }
-
-        .why-use-trackgenix-box > ul > li{
-        font-size: 24px;
-        line-height: 28px
     }
-
+    .why-use-trackgenix-box > ul > li{
+        font-size: 24px;
+        line-height: 28px;
+    }
     .why-use-trackgenix-box > ul > li::before{
         height: 14px;
         background-size: 8px 12px;
-      }
+    }
 }
-@media   (min-width : 1512px) {
 
+@media  (min-width : 1512px) {
+    
     .main-WhyUseTrackgenix > h2{
         width: 304px;
         height: 38px;
@@ -284,60 +231,43 @@ li{
      .why-use-trackgenix-box > img{
         width: 331px;
         height: 241px;
-     }
-
+    }
     li{
         font-size: 24px;
         line-height: 28px;
     }
-    .why-use-trackgenix-box > ul > li::before {
+    .why-use-trackgenix-box > ul > li::before{
         height: 17px;
         background-size: 9px 15px;
-      }
-   
+    }
 }
-
-  /* -----------------------------[ASK]------------------------------------------------ */
-
-  .main-Ask {
-    /*
-    display:flex;
-    flex-direction: column;
-    align-content: flex-start;*/
-  }
-
-  .main-Ask > h2{
+.main-Ask > h2{
     width: 170px;
     height: 16px;
-  }
-
-  .ask-Group-Box{
-   display: flex;
-   flex-direction: column;
-   padding: 15px;
-  }
-
-  .ask-Group-Box > .ask-Group{
-    padding-bottom: 10px;
-    
-  }
-  .ask-Group-Box > .ask-Group > input{
+}
+.ask-Group-Box{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.ask-Group-Box > .ask-Group{
+    padding-bottom: 10px; 
+}
+.ask-Group-Box > .ask-Group > input{
     max-width: 300px;
     width:100%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
-  }
-
-  .ask-Group-Box > .ask-Group > select {
+}
+.ask-Group-Box > .ask-Group > select{
     max-width: 325px;
     width:100%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
-
-.ask-Group-Box > .ask-Group > textarea {
+.ask-Group-Box > .ask-Group > textarea{
     max-width: 325px;
     width:100%;
     height: 97px;
@@ -345,24 +275,21 @@ li{
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
-
 .ask-Group-Button{
    display: flex;
    justify-content: flex-end;
    margin-right: 34px;
 }
-
-.SubmitButton > input[type = "submit"] {
-    padding: 10px 24px;
+.SubmitButton > input[type = "submit"]{
     flex-direction: column;
     align-items: center;
+    padding: 10px 24px;
     background-color: #AACE9B;
     color: #ffffff;
     border: none;
     border-radius: 5px;
 }
-
-.CancelButton > input[type = "submit"] {
+.CancelButton > input[type = "submit"]{
     flex-direction: column;
     align-items: center;
     padding: 10px 24px;
@@ -373,100 +300,87 @@ li{
     border-radius: 5px; 
 }
 
-@media   (min-width : 834px) and (max-width : 1511px){
+@media  (min-width : 834px) and (max-width : 1511px){
     .main-Ask > h2 {
         width: 381px;
         height: 33px;
-      }
-      .ask-Group-Box > .ask-Group > input{
-         max-width: 700px;
-      }
-      .ask-Group-Box > .ask-Group > select {
+    }
+    .ask-Group-Box > .ask-Group > input{
+        max-width: 700px;
+    }
+    .ask-Group-Box > .ask-Group > select{
         max-width: 725px;
     }
-        .ask-Group-Box > .ask-Group > textarea {
+    .ask-Group-Box > .ask-Group > textarea{
         max-width: 725px;
-    }
-    
+    }   
 }
 
-@media  (min-width : 1512px) {
+@media  (min-width : 1512px){
+
     .main-Ask > h2{
         width: 372px;
         height: 38px;
-      }
-      .ask-Group-Box > .ask-Group > input{
+    }
+    .ask-Group-Box > .ask-Group > input{
         max-width: 623px;
-      }
-      .ask-Group-Box > .ask-Group > select {
+    }
+    .ask-Group-Box > .ask-Group > select {
         max-width: 649px;
-        }
-    .ask-Group-Box > .ask-Group > textarea {
+    }
+    .ask-Group-Box > .ask-Group > textarea{
         max-width: 649px;
         height: 203px;
     }
-    .ask-Group-Button  {
+    .ask-Group-Button{
         margin-right: 398px;
     }
-
-    .SubmitButton > input[type = "submit"] {
+    .SubmitButton > input[type = "submit"]{
         padding: 14px 36px;
     }
-    
-    .CancelButton > input[type = "submit"] {
+    .CancelButton > input[type = "submit"]{
         padding: 14px 36px;
     }
-
 }    
-
-/* -----------------------------[Our History]------------------------------------------------ */
-
 .main-Our-History > h2{
     width: 78px;
     height: 14px;
 }
-
 .Our-History-Box{
    display: flex;
    flex-direction: column;
    align-items: center;
    margin: 28px 30px;
 }
-
-
 .Our-History-Box > p{
     order: 0;
     width: 331px;
     text-align: justify;
- }
-
- .Our-History-Box > img{
+}
+.Our-History-Box > img{
     order: 1;
     padding-top: 15px;
     width: 285px;
     height: 155px;
-  }
+}
 
-  @media   (min-width : 834px) and (max-width : 1511px){
-    
+@media  (min-width : 834px) and (max-width : 1511px){
+
     .main-Our-History > h2{
         width: 170px;
         height: 33px;
     }
-
-    .Our-History-Box {
+    .Our-History-Box{
         padding-bottom: 109px;
-     
-     }
+    }
     .Our-History-Box > p{
         font-weight: 400;
         font-size: 24px;
         line-height: 28px;
         width: 742px;
         text-align: center;
-     
-     }
-     .mobile-Our-History-Box {
+    }
+     .mobile-Our-History-Box{
         display: none;
      }
      .Our-History-Box > img{
@@ -475,8 +389,8 @@ li{
     }
 }
 
-@media   (min-width : 1512px){
-    
+@media  (min-width : 1512px){
+
     .main-Our-History > h2{
         width: 160px;
         height: 38px;
@@ -486,64 +400,56 @@ li{
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 44px;
-       
-     }
-
+    }
     .Our-History-Box > p{
         width: 560px;
-     }
-     .mobile-Our-History-Box {
+    }
+    .mobile-Our-History-Box{
         display: none;
-     }
-     .Our-History-Box > img{
+    }
+    .Our-History-Box > img{
         width: 456px;
         height: 256px;
     }
 }
 
-/* -----------------------------[main-all-Block]------------------------------------------------ */
 .main-all-Block{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     border-right: 50px #373867;
 }
-
 .Block{
    text-align: left;
    padding-right: 15px;
    border-right:1px solid #cccc;
 }
-
 .Block > h2{
     padding-bottom: 15px;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     color: #373867;
- }
-
- .Block >P {
+}
+.Block >P{
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
- }
-
- .final-Block > h2{
+}
+.final-Block > h2{
     padding-bottom: 15px;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     color: #373867;
- }
-
- .final-Block >P {
+}
+.final-Block >P {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
- }
+}
 
- @media   (min-width : 834px) and (max-width : 1512px){
+@media (min-width : 834px) and (max-width : 1512px){
     
     .Block >P {
         font-size: 24px;
@@ -553,9 +459,7 @@ li{
         font-weight: 700;
         font-size: 24px;
         line-height: 28px;
-     }
-
-     .Block :nth-child(1){
+    }.Block :nth-child(1){
        padding-right: 42px;
      }
      .final-Block >P {
@@ -566,19 +470,16 @@ li{
         font-weight: 700;
         font-size: 24px;
         line-height: 28px;
-     }
+    }
 }
 
 @media  (min-width : 1512) {
-    
+
     .main-all-Block{
         justify-content:space-around;
         padding-right: 140px;
     }
-
     .Block :nth-child(1){
         padding-right: 42px;
     }
-
-
 }

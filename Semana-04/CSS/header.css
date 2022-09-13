@@ -8,13 +8,11 @@ header  {
     height: 30px;
     background-color: #AACE9B;
 }
-
 header img {
     width: 10px;
     height: 8px;
     padding-left:10px;
 }
-
 header input{
     margin: auto;
     border-radius: 10px;
@@ -23,9 +21,8 @@ header input{
     background-size: 8px 8px;
 }
 
-@media   (min-width : 1512px){
-
-header{
+@media  (min-width : 1512px){
+    header{
         height: 126px;    
     }
     header img {
@@ -38,5 +35,4 @@ header{
         background: #FAFBFD url("/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Button\ Search.png") no-repeat 14px center;
         background-size: 20px 20px;
     }
-
 }
