@@ -11,7 +11,6 @@ console.log(sum);
 //1.b)Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.
 
 console.log('-Exercise 1.b:');
-
 var firstName = 'Gonzalo ';
 var lastName = 'Asencio';
 var concatenation = firstName + lastName;
@@ -20,7 +19,6 @@ console.log(concatenation);
 //1.c)Crear dos variables de tipo String y sumar el largo de cada variable (cantidad de letras del string) guardando el resultado de la suma en una 3er variable (utilizar length).
 
 console.log('-Exercise 1.c:');
-
 var firstWord = 'Radium';
 var secondWord = 'Rocket';
 var sum = firstWord.length + secondWord.length;
