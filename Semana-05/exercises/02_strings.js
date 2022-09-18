@@ -32,6 +32,7 @@ var spacePosition= spaceWord.indexOf(" ");
 console.log(spaceWord, "Space word position =",spacePosition);
 
 //Utilizar los métodos de los ejercicios anteriores para generar un nuevo string que tenga la primera letra de ambas palabras en mayúscula y las demás letras en minúscula (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).
+
 console.log('-Exercise 2.e:');
 var newWord = 'Radium Rocket';
 var completeWord = newWord.substring(-newWord.length,1).toUpperCase()  + newWord.slice(1,newWord.indexOf(" ")).toLowerCase() +
