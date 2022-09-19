@@ -17,8 +17,8 @@ h1{
     line-height: 47px;
 }
 .contenedor{
+    max-height:1704px;  
 }
-
 #Title{
     padding-bottom: 5px;
     font-size: 14px;
@@ -35,14 +35,7 @@ h1{
     color: #AACE9B;
 }
 
-@media   (min-width : 390px) and (max-width : 833px){
-    
-    .contenedor{
-        max-height:1704px;  
-    }
-}
-
-@media   (min-width : 834px) and (max-width : 1511px){
+@media   (min-width : 834px){
   
     .contenedor{
         max-height:3109px; 
