@@ -1,4 +1,4 @@
-header  {
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +8,7 @@ header  {
     height: 30px;
     background-color: #AACE9B;
 }
-header img {
+header img{
     width: 10px;
     height: 8px;
     padding-left:10px;
@@ -20,8 +20,15 @@ header input{
     background: #FAFBFD url("/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Button\ Search.png") no-repeat 5px center;
     background-size: 8px 8px;
 }
-
-@media  (min-width : 1512px){
+@media(min-width : 834px){
+    header{
+        height: 92px;    
+    }
+    header img {
+        display: none;
+    }
+}
+@media(min-width : 1512px){
     header{
         height: 126px;    
     }

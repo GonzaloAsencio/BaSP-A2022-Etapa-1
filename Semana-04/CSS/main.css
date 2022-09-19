@@ -2,7 +2,7 @@ main{
     flex: 1;
     background-color: #ffffff;
 }
-.main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
+.main-features,.main-ask,.main-whyusetrackgenix,.main-ourhistory, .main-allblock{
     margin: 10px;
 }
 
@@ -13,40 +13,40 @@ main{
     }
     
 }
-@media   (min-width :1512px) {
+@media(min-width :1512px) {
 
     .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
         margin: 24px;
     }
     
 }
-.main-Info{
+.main-info{
     display: flex;
     justify-content:center;
     flex-direction: column;
     align-items: center;
     padding-bottom: 40px;
 }
-.main-Info > h1{
+.main-info > h1{
     padding: 5px 73px 5px 73px;
     order: 1;
 }
-.main-Info > h2[id = "Subtitled"] {
+.main-info > h2[id = "Subtitled"] {
    order:2;
 }
-.main-Info > img{
+.main-info > img{
     width: 155px;
     height: 144px;
     margin:5px;
     order: 3;
 }
-.main-Info > p{
+.main-info > p{
     width: 283px;
     height: 42px;
     text-align: center;
     order: 4;
 }
-.main-Info > input{
+.main-info > input{
     display: none;
     align-items: center;
     order: 5;
@@ -59,37 +59,37 @@ main{
 }
 
 @media(min-width : 834px){
-    .main-Info > img{
+    .main-info > img{
         width: 196px;
         height: 226px;
         margin: 14px;
     }
-    .main-Info > p{
+    .main-info > p{
         width: 562px;
         height: 120px;
     }  
 }
 
 @media(min-width :1512px){
-    .main-Info{
+    .main-info{
         align-items: flex-start;
         padding-left: 28px;
         padding-bottom: 230px;
     }
-    .main-Info > h1{
+    .main-info > h1{
         padding: 65px 0px 0px 0px;
     }
-    .main-Info > h2[id = "Subtitled"]{
+    .main-info > h2[id = "Subtitled"]{
         padding: 37px 0px 0px 0px;
     }
-    .main-Info > p{
+    .main-info > p{
         width: 570px;
         height: 62px;
         order: 3;
         padding-top: 38px;
         text-align: center;
     }
-    .main-Info > img{
+    .main-info > img{
         position:absolute;
         width: 458px;
         height: 449px;
@@ -98,32 +98,32 @@ main{
         align-self: flex-end;
         order: 5;
     }
-    .main-Info > input{
+    .main-info > input{
         display: revert;
         order: 4;
     }  
 }
 
 
-.main-Features > h2{
+.main-features > h2{
     width: 55px;
 }
-.main-Article-Conteiner{
+.main-articleconteiner{
     display:flex;
     flex-wrap: wrap;
     margin-top: 10px;
 }
-.main-Article-Conteiner > article{
+.main-articleconteiner > article{
     display: flex;
     justify-content: center;
     flex-basis: 100px;
     padding-bottom: 30px;
 }
-.main-Article-Conteiner > article > img{
+.main-articleconteiner > article > img{
     width: 40px;
     height: 40px;
 }
-.main-Article-Conteiner >article >  p{
+.main-articleconteiner >article >  p{
     padding: 10px 5px 1px 5px;
     width: 85px;
     height: 30px;
@@ -131,38 +131,38 @@ main{
 }
 
 @media(min-width : 834px){
-.main-Features > h2{
+.main-features > h2{
     width: 127px;
 }
-.main-Article-Conteiner > article > img{
+.main-articleconteiner > article > img{
     width: 91.68px;
     height: 88.91px;
 }
-.main-Article-Conteiner > article{
+.main-articleconteiner > article{
     justify-content: flex-start;
     flex-basis: 370px;
 }
-.main-Article-Conteiner >article >  p{
+.main-articleconteiner >article >  p{
     width: 140px;
     padding: 10px 0px 0px  71px;    
 }
 }
 @media(min-width : 1512px){
-.main-Article-Conteiner >article >  p{
+.main-articleconteiner >article >  p{
      width: 200px;
 }
 }
     
-.main-WhyUseTrackgenix > h2{
+.main-whyusetrackgenix > h2{
     width: 133px;
     height: 16px;
  }
-.why-use-trackgenix-box{
+.main-whyusetrackgenixbox{
     display:flex;
     justify-content: space-between;
     padding:10px 12px 25px 10px;
  }
-.why-use-trackgenix-box > img{
+.main-whyusetrackgenixbox > img{
     width: 130px;
     height: 95px;
 }
@@ -179,7 +179,7 @@ li{
     line-height: 14px;
     color: #373867;
 }
-.why-use-trackgenix-box > ul > li::before{
+.main-whyusetrackgenixbox > ul > li::before{
     content: '';
     display: inline-block;
     height: 11px;
@@ -190,39 +190,39 @@ li{
 }
 
 @media  (min-width : 834px){
-.main-WhyUseTrackgenix > h2{
+.main-whyusetrackgenix > h2{
     width: 304px;
     height: 33px;
 }
-.why-use-trackgenix-box{
+.main-whyusetrackgenixbox{
     padding:30px 37px 25px 10px;
 }
-.why-use-trackgenix-box > img{
+.main-whyusetrackgenixbox > img{
     width: 299.81px;
     height: 210.14px;
 }
-.why-use-trackgenix-box > ul{
+.main-whyusetrackgenixbox > ul{
     justify-content: space-evenly ;
     padding-left: 10px;
 }
-.why-use-trackgenix-box > ul > li{
+.main-whyusetrackgenixbox > ul > li{
     font-size: 24px;
     line-height: 28px;
 }
-.why-use-trackgenix-box > ul > li::before{
+.main-whyusetrackgenixbox > ul > li::before{
     height: 14px;
     background-size: 8px 12px;
 }
 }
 @media  (min-width : 1512px) {
-.main-WhyUseTrackgenix > h2{
+.main-whyusetrackgenix > h2{
     width: 304px;
     height: 38px;
 }
-.why-use-trackgenix-box {
+.main-whyusetrackgenixbox {
     padding:30px 242px 117px 10px;
 }
-.why-use-trackgenix-box > img{
+.main-whyusetrackgenixbox > img{
     width: 331px;
     height: 241px;
 }
@@ -230,38 +230,38 @@ li{
     font-size: 24px;
     line-height: 28px;
 }
-.why-use-trackgenix-box > ul > li::before{
+.main-whyusetrackgenixbox > ul > li::before{
     height: 17px;
     background-size: 9px 15px;
 }
 }
-.main-Ask > h2{
+.main-ask > h2{
     width: 170px;
     height: 16px;
 }
-.ask-Group-Box{
+.main-askbox{
     display: flex;
     flex-direction: column;
     padding: 15px;
 }
-.ask-Group-Box > .ask-Group{
+.main-askbox > .askbox-group{
     padding-bottom: 10px; 
 }
-.ask-Group-Box > .ask-Group > input{
+.main-askbox > .askbox-group > input{
     max-width: 300px;
     width:100%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
-.ask-Group-Box > .ask-Group > select{
+.main-askbox > .askbox-group > select{
     max-width: 325px;
     width:100%;
     padding: 10px 12px;
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
-.ask-Group-Box > .ask-Group > textarea{
+.main-askbox > .askbox-group > textarea{
     max-width: 325px;
     width:100%;
     height: 97px;
@@ -269,12 +269,12 @@ li{
     border: 1px solid #AACE9B;
     border-radius: 4px;
 }
-.ask-Group-Button{
+.askbox-groupbutton{
    display: flex;
    justify-content: flex-end;
    margin-right: 34px;
 }
-.SubmitButton > input[type = "submit"]{
+.submitButton > input[type = "submit"]{
     flex-direction: column;
     align-items: center;
     padding: 10px 24px;
@@ -283,7 +283,7 @@ li{
     border: none;
     border-radius: 5px;
 }
-.CancelButton > input[type = "submit"]{
+.cancelButton > input[type = "submit"]{
     flex-direction: column;
     align-items: center;
     padding: 10px 24px;
@@ -295,176 +295,177 @@ li{
 }
 
 @media  (min-width : 834px){
-.main-Ask > h2 {
+.main-ask > h2 {
     width: 381px;
     height: 33px;
 }
-.ask-Group-Box > .ask-Group > input{
+.main-askbox > .askbox-group > input{
     max-width: 700px;
 }
-.ask-Group-Box > .ask-Group > select{
+.main-askbox > .askbox-group > select{
     max-width: 725px;
 }
-.ask-Group-Box > .ask-Group > textarea{
+.main-askbox > .askbox-group > textarea{
     max-width: 725px;
 }   
 }
 @media  (min-width : 1512px){
-.main-Ask > h2{
+.main-ask > h2{
     width: 372px;
     height: 38px;
 }
-.ask-Group-Box > .ask-Group > input{
+.main-askbox > .askbox-group > input{
     max-width: 623px;
 }
-.ask-Group-Box > .ask-Group > select {
+.main-askbox > .askbox-group > select {
     max-width: 649px;
 }
-.ask-Group-Box > .ask-Group > textarea{
+.main-askbox > .askbox-group > textarea{
     max-width: 649px;
     height: 203px;
 }
 .ask-Group-Button{
     margin-right: 398px;
 }
-.SubmitButton > input[type = "submit"]{
+.submitButton > input[type = "submit"]{
     padding: 14px 36px;
 }
-.CancelButton > input[type = "submit"]{
+.cancelButton > input[type = "submit"]{
     padding: 14px 36px;
 }
+
 }    
-.main-Our-History > h2{
+.main-ourhistory > h2{
     width: 78px;
     height: 14px;
 }
-.Our-History-Box{
+.main-ourhistorybox{
    display: flex;
    flex-direction: column;
    align-items: center;
    margin: 28px 30px;
 }
-.Our-History-Box > p{
+.main-ourhistorybox > p{
     order: 0;
     width: 331px;
     text-align: justify;
 }
-.Our-History-Box > img{
+.main-ourhistorybox > img{
     order: 1;
     padding-top: 15px;
     width: 285px;
     height: 155px;
 }
 @media  (min-width : 834px){
-.main-Our-History > h2{
+.main-ourhistory > h2{
     width: 170px;
     height: 33px;
 }
-.Our-History-Box{
+.main-ourhistorybox{
     padding-bottom: 109px;
 }
-.Our-History-Box > p{
+.main-ourhistorybox > p{
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     width: 742px;
     text-align: center;
 }
-.mobile-Our-History-Box{
+.main-mobilebox{
     display: none;
 }
-.Our-History-Box > img{
+.main-ourhistorybox > img{
     width: 318px;
     height: 142px;
 }
 }
 @media(min-width : 1512px){
 
-    .main-Our-History > h2{
+    .main-ourhistory > h2{
         width: 160px;
         height: 38px;
     }
-    .Our-History-Box {
+    .main-ourhistorybox {
         margin: 0px;
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 44px;
     }
-    .Our-History-Box > p{
+    .main-ourhistorybox > p{
         width: 560px;
     }
-    .mobile-Our-History-Box{
+    .main-mobilebox{
         display: none;
     }
-    .Our-History-Box > img{
+    .main-ourhistorybox > img{
         width: 456px;
         height: 256px;
     }
 }
-.main-all-Block{
+.main-allblock{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     border-right: 50px #373867;
 }
-.Block{
+.block{
    text-align: left;
    padding-right: 15px;
    border-right:1px solid #cccc;
 }
-.Block > h2{
+.block > h2{
     padding-bottom: 15px;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     color: #373867;
 }
-.Block >P{
+.block >P{
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
 }
-.final-Block > h2{
+.finalBlock > h2{
     padding-bottom: 15px;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     color: #373867;
 }
-.final-Block >P {
+.finalBlock >P {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
 }
 
 @media (min-width : 834px){
-.Block >P {
+.block >P {
     font-size: 24px;
     line-height: 28px;
 }
-.Block > h2{
+.block > h2{
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-}.Block :nth-child(1){
+}.block :nth-child(1){
     padding-right: 42px;
 }
-.final-Block >P {
+.finalBlock >P {
     font-size: 24px;
     line-height: 28px;
 }
-.final-Block >h2 {
+.finalBlock >h2 {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
 }
 }
 @media  (min-width : 1512) {
-.main-all-Block{
+.main-allblock{
     justify-content:space-around;
     padding-right: 140px;
 }
-.Block :nth-child(1){
+.block :nth-child(1){
     padding-right: 42px;
 }
 }
