@@ -1,18 +1,18 @@
 aside{
     display: none;
 }
-.aside-Conteiner> h2{
+.aside-conteiner> h2{
     width: 100px;
     padding-top: 70px;
     margin-left: 55px;
 }
-.aside-Menu{
+.aside-menu{
     padding-top: 80px;
 }
-.aside-Menu> ul{
+.aside-menu> ul{
     padding-left: 0px;
 }
-.aside-Menu > ul > li{
+.aside-menu > ul > li{
     padding-left: 55px;
     padding-top: 66px;
     padding-bottom: 72px;
@@ -22,21 +22,21 @@ aside{
     line-height: 35px;
     color: #373867;
 }
-.aside-Contact> h2{
+.aside-contact> h2{
     width: 100px;
     margin-left: 55px;
     padding-top: 36px;
 }
-.aside-Contact-Box{
+.aside-contactbox{
     padding: 30px 20px 20px 55px;
 
 }
-.aside-Contact-Box > p{
+.aside-contactbox > p{
     font-weight: 400;
     font-size: 25px;
     line-height: 29px;
 }
-.aside-Contact-Box > p > img{
+.aside-contactbox > p > img{
     padding-right: 29px;
     width: 29px;
     height: 29px;
@@ -46,7 +46,7 @@ aside{
    aside{
         display:contents;
    }
-   .aside-Conteiner{
+   .aside-conteiner{
         background-color: rgb(255, 255, 255);
         border-right: 3px solid #CDCCCC;
         float:left;

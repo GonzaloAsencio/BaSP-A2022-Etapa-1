@@ -8,14 +8,12 @@ footer{
     align-items: center;
     border-top: 3px solid #AACE9B;
 }
-
-.footer-img> img{
+.footer-img > img{
     height: 15px;
     width: 14px;
     margin-top: 15px;
     margin-bottom: 6px;
 }
-
 footer > p{
     font-weight: 400;
     font-size: 12px;
@@ -23,10 +21,9 @@ footer > p{
     text-align: center;
     color: #373867;
 }
-
-@media  (min-width : 834px){
-
-    .footer-img> img{
+@media(min-width : 834px){
+    
+    .footer-img > img{
         height: 30px;
         width: 29px;
     }

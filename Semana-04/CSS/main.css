@@ -5,17 +5,16 @@ main{
 .main-features,.main-ask,.main-whyusetrackgenix,.main-ourhistory, .main-allblock{
     margin: 10px;
 }
+@media(min-width :834px) {
 
-@media   (min-width :834px) {
-
-    .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
+    .main-features,.main-ask,.main-whyusetrackgenix,.main-ourhistory, .main-allblock{
         margin: 39px;
     }
     
 }
 @media(min-width :1512px) {
 
-    .main-Features,.main-Ask,.main-WhyUseTrackgenix,.main-Our-History, .main-all-Block{
+    .main-features,.main-ask,.main-whyusetrackgenix,.main-ourhistory, .main-allblock{
         margin: 24px;
     }
     
@@ -72,9 +71,11 @@ main{
 
 @media(min-width :1512px){
     .main-info{
+        flex-wrap: wrap;
         align-items: flex-start;
         padding-left: 28px;
         padding-bottom: 230px;
+        height: 400px;
     }
     .main-info > h1{
         padding: 65px 0px 0px 0px;
@@ -90,7 +91,7 @@ main{
         text-align: center;
     }
     .main-info > img{
-        position:absolute;
+        padding-top: 200px;
         width: 458px;
         height: 449px;
         bottom: 240px;
@@ -103,8 +104,6 @@ main{
         order: 4;
     }  
 }
-
-
 .main-features > h2{
     width: 55px;
 }
@@ -189,7 +188,7 @@ li{
     background-repeat: no-repeat;
 }
 
-@media  (min-width : 834px){
+@media(min-width : 834px){
 .main-whyusetrackgenix > h2{
     width: 304px;
     height: 33px;
@@ -214,7 +213,7 @@ li{
     background-size: 8px 12px;
 }
 }
-@media  (min-width : 1512px) {
+@media(min-width : 1512px) {
 .main-whyusetrackgenix > h2{
     width: 304px;
     height: 38px;
@@ -294,7 +293,7 @@ li{
     border-radius: 5px; 
 }
 
-@media  (min-width : 834px){
+@media(min-width : 834px){
 .main-ask > h2 {
     width: 381px;
     height: 33px;
@@ -309,7 +308,7 @@ li{
     max-width: 725px;
 }   
 }
-@media  (min-width : 1512px){
+@media(min-width : 1512px){
 .main-ask > h2{
     width: 372px;
     height: 38px;
@@ -438,7 +437,7 @@ li{
     line-height: 14px;
 }
 
-@media (min-width : 834px){
+@media(min-width : 834px){
 .block >P {
     font-size: 24px;
     line-height: 28px;
@@ -460,7 +459,7 @@ li{
     line-height: 28px;
 }
 }
-@media  (min-width : 1512) {
+@media(min-width : 1512) {
 .main-allblock{
     justify-content:space-around;
     padding-right: 140px;

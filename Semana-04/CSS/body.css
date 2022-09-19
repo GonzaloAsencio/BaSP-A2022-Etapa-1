@@ -13,13 +13,15 @@ p{
     color:#373867;
 }
 h1{
+    font-weight: 700;
     font-size: 40px;
     line-height: 47px;
+    color:#373867;
 }
 .contenedor{
     max-height:1704px;  
 }
-#Title{
+.title{
     padding-bottom: 5px;
     font-size: 14px;
     font-weight: 700;
@@ -27,7 +29,6 @@ h1{
     color: #373867;
     border-bottom: 2px solid #AACE9B;
 }
-
 #Subtitled{
     font-weight: 700;
     font-size: 14px;
@@ -35,7 +36,7 @@ h1{
     color: #AACE9B;
 }
 
-@media   (min-width : 834px){
+@media(min-width : 834px){
   
     .contenedor{
         max-height:3109px; 
@@ -43,12 +44,13 @@ h1{
     h1{
         font-size: 68px;
         line-height: 80px;
+        
     }
     p{
         font-size: 30px;
         line-height: 35px;
     }
-    #Title{
+    .title{
         padding-bottom: 15px;
         font-size: 32px;
         line-height: 38px;
@@ -57,25 +59,20 @@ h1{
     #Subtitled{
         font-size: 21px;
         line-height: 25px;
-     
     }
 }
-
-@media   (min-width : 1512px){
-
-    .contenedor{
-        height: 100%;
-        max-height:3500px;      
-    }
+@media(min-width : 1512px){
     h1{
+        font-weight: 700;
         font-size: 48px;
         line-height: 56px;
+        letter-spacing: 0.3em;
     }
     p{
         font-size: 24px;
         line-height: 28px;
     }
-    #Title{
+    .title{
         font-size: 30px;
         line-height: 35px;
         border-bottom: 3px solid #AACE9B;
@@ -86,9 +83,9 @@ h1{
      
     }
     .contenedor{
-          
+        height: 100%;
         width:100%;
-        max-height:1704px;
+        max-height:3500px;  
         margin: auto;
         display: flex;
         flex-flow: row wrap;
