@@ -4,7 +4,7 @@ Trackgenix is a human resource application designed to load the number of employ
 
 # How to Open 📂
 ```bash
-1- Access to the folder "Semana-03".
+1- Access to the folder "Semana-05".
 2- Open the file "index.html" on your favourite browser.
 ```
 # Tech 💻
@@ -42,5 +42,10 @@ The following technologies are currently being used:
 >First, I separate all the components of the style.css in different scripts.Then I created a mobile, tablet and desktop version of the trackgenix page with media queries.
 >
 ***
+ ### __Week 05__
+*** 
+>I did the java script exercises and fixed the errors from last week
+>
+
 ***
 *Made by Gonzalo Asencio*

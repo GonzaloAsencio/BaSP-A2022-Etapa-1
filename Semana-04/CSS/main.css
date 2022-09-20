@@ -5,14 +5,14 @@ main{
 .main-features,.main-ask,.main-whyusetrackgenix,.main-ourhistory, .main-allblock{
     margin: 10px;
 }
-@media(min-width :834px) {
+@media(min-width :834px){
 
     .main-features,.main-ask,.main-whyusetrackgenix,.main-ourhistory, .main-allblock{
         margin: 39px;
     }
     
 }
-@media(min-width :1512px) {
+@media(min-width :1512px){
 
     .main-features,.main-ask,.main-whyusetrackgenix,.main-ourhistory, .main-allblock{
         margin: 24px;

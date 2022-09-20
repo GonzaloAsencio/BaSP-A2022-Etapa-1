@@ -12,7 +12,7 @@ for (let index = 0; index < numberArray.length; index++) {
 
 console.log('-Exercise 5.b:');
 for (let index = 0; index < numberArray.length; index++) {
-  alert( numberArray[index].substring(-numberArray[index].length,1).toUpperCase() + numberArray[index].slice(1,numberArray[index].length).toLowerCase());
+  alert( numberArray[index].substring(0,1).toUpperCase() + numberArray[index].slice(1,numberArray[index].length).toLowerCase());
 }
 
 //5.c)Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la cadena completa.
