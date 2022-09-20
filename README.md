@@ -44,7 +44,7 @@ The following technologies are currently being used:
 ***
  ### __Week 05__
 *** 
->I did the java script exercises and fixed the errors from last week
+>I did the java script exercises and fixed the errors from last week.
 >
 
 ***
