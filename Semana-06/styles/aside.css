@@ -1,0 +1,55 @@
+aside{
+    display: none;
+}
+.aside-conteiner> h2{
+    width: 100px;
+    padding-top: 70px;
+    margin-left: 55px;
+}
+.aside-menu{
+    padding-top: 80px;
+}
+.aside-menu> ul{
+    padding-left: 0px;
+}
+.aside-menu > ul > li{
+    padding-left: 55px;
+    padding-top: 66px;
+    padding-bottom: 72px;
+    font-weight: 400;
+    font-size: 30px;
+    border-bottom: 1px solid#CDCCCC;
+    line-height: 35px;
+    color: #373867;
+}
+.aside-contact> h2{
+    width: 100px;
+    margin-left: 55px;
+    padding-top: 36px;
+}
+.aside-contactbox{
+    padding: 30px 20px 20px 55px;
+
+}
+.aside-contactbox > p{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+}
+.aside-contactbox > p > img{
+    padding-right: 29px;
+    width: 29px;
+    height: 29px;
+}
+
+@media  (min-width : 1512px){
+   aside{
+        display:contents;
+   }
+   .aside-conteiner{
+        background-color: rgb(255, 255, 255);
+        border-right: 3px solid #CDCCCC;
+        float:left;
+        flex:0 0 397px;
+   }
+}
