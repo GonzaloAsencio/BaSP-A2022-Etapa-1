@@ -36,6 +36,7 @@ main{
     border-radius: 4px;*/
 }
 .user-input > label{
+    padding-bottom: 10px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -66,6 +67,11 @@ input[type="button"]{
 }
 
 
+
+
+.text-error{
+    color:  #F13312;
+}
 .border-error{
-    border:5px solid rgb(255, 0, 128);
+    border: 2px solid #F13312;
 }
