@@ -1,0 +1,71 @@
+main{
+    height: 760px;
+    flex: 1;
+    background-color: #ffffff;
+}
+.main-logincontiner{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.login-form{
+    background-color: #ffffff;
+    padding: 30px;
+    width: 300px;
+}
+.login-form > h2{
+    margin-bottom: 60px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #373867;
+}
+.user-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.user-input > input{
+    padding: 10px 12px;
+  /*  border: 1px solid #373867;
+    border-radius: 4px;*/
+}
+.user-input > label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+.user-account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-account > div{
+ padding-bottom: 21px;
+}
+.login-button{
+    text-align: center;
+}
+input[type="button"]{
+    align-items: center;
+    padding: 14px 36px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    background: #AACE9B;
+    border: 5px;
+    border-radius: 5px;
+}
+
+
+.border-error{
+    border:5px solid rgb(255, 0, 128);
+}
