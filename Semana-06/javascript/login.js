@@ -1,12 +1,9 @@
-var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 function checkEmail (correo){
-    if (expReg.test(correo)){
-       // alert("La dirección de email " + correo + " es correcta.");
+    if (emailExpression.test(correo)){
         return true;   
-    } else {
-      //  alert("La dirección de email es incorrecta.");
-        return false;   
-        
+    }else{
+        return false;       
     }
 }
 var myregex = /^(?=.*\d)(?=.*[a-z]).{8,}$/; 
@@ -23,68 +20,79 @@ function checkPassword(password){
 window.onload = function () {
     var userEmail = document.getElementById("userEmail");
     var userPassword = document.getElementById("userPassword");
-    var button = document.getElementById("loginButton");
+    var loginButton = document.getElementById("loginButton");
     var userAccount = document.getElementById("userAccount");
-   
-    var passworDiv = document.createElement("div");
-    var userDiv = document.createElement("div");
-    var passwordText = document.createElement("h2");
-    var emailText = document.createElement("h2");
-    passwordText.innerHTML = "Wrong Password";
-    emailText.innerHTML = "Wrong Email";
-    passwordText.classList.add("text-error");
-    emailText.classList.add("text-error");
-    passworDiv.prepend(passwordText);
-    userDiv.prepend(emailText);
-
-  
+    
     userEmail.onblur = function (){
         if (!checkEmail(userEmail.value) && userEmail.value !== ''){
-            userAccount.prepend(userDiv);
+            CreateWarning(userEmail);
             InputWarining(userEmail);
         }
     }
     userEmail.onfocus = function (){
         if (!checkEmail(userEmail.value)){
-            userDiv.remove();
+            DeleteWarning();
             CancelInputWarning(userEmail);
         }
     }
-
     //**************------------------------*******/
     userPassword.onblur = function (){
         if (!checkPassword(userPassword.value) && userPassword.value !== ''){
-            userAccount.prepend(passworDiv);
-           InputWarining(userPassword);
+            CreateWarning(userPassword);
+            InputWarining(userPassword);
         }
     }
-
-   userPassword.onfocus = function (){
-        if (!checkPassword(userPassword.value)){
-                passworDiv.remove();
+    userPassword.onfocus = function (){
+        if (userPassword.value !== ''){
+            if(!checkPassword(userPassword.value)){
                 CancelInputWarning(userPassword);
-            }
+                DeleteWarning();
+            }       
+        }
     }
-
-   //TENGO QUE  HACER ESTO EN UN BLUR Y NO EN UN ONCLIKC
-   //Button Value
-    button.onclick = function (e){
+    loginButton.onclick = function (e){
         e.preventDefault();
-        if(!checkEmail(userEmail.value)){
+        if(!checkEmail(userEmail.value) && userEmail.value !== '' ){
             InputWarining(userEmail);
-            userAccount.prepend(userDiv);
+            CreateWarning(userEmail);
             alert("Wrong Email");
         }
-        if (!checkPassword(userPassword.value)){
+        if (!checkPassword(userPassword.value) && userPassword.value !== ''){
             InputWarining(userPassword);
-            userAccount.prepend(passworDiv);
+            CreateWarning(userPassword);
             alert("Wrong Password");
         }
         if (checkEmail(userEmail.value) && checkPassword(userPassword.value)){
-          alert("Email: " + userEmail.value + " Contraseña: " + userPassword.value );
+          alert("Email: " + userEmail.value + " Contraseña: " + userPassword.value);
         }
     }
 
+    
+    function CreateWarning(inputName){   
+
+        var elementNameExists = document.getElementById("warningBox");
+        var warningDiv = document.createElement("div");
+        var warningText = document.createElement("h2");
+        warningText.innerHTML = "Wrong " + inputName.id;
+        warningDiv.appendChild(warningText);
+        warningDiv.setAttribute("id","warningBox");
+        warningDiv.classList.add("text-error");
+
+        if (!elementNameExists){
+            userAccount.prepend(warningDiv);
+        }else if (elementNameExists) {
+            var selector = document.querySelector("#warningBox > h2");
+            selector.textContent = warningText.innerHTML;
+         }
+    }
+    function DeleteWarning(){
+        var elementNameExists = document.getElementById("warningBox");
+        if (elementNameExists){
+            elementNameExists.remove();
+        }else{
+            //No hay nada
+        }
+    }
     function InputWarining(input){
         input.classList.add("text-error");
         input.classList.add("border-error");
