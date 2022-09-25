@@ -1,0 +1,70 @@
+main {
+    height: 760px;
+    flex: 1;
+    background-color: #ffffff;
+}
+.main-singupcontiner{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.form{
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    width: 370px;
+    height: 600px;
+}
+.form > h2{
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #373867;
+
+}
+.input-warp{
+    width: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.input-warp > label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+.input-warp > input {
+    padding: 10px 12px;
+    border: 1px solid #373867;
+    border-radius: 4px;
+}
+.input-password{
+    display: flex;
+}
+.create-button{
+    margin-top: 30px;
+    text-align: center;
+}
+input[type="button"]{
+    align-items: center;
+    padding: 14px 36px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    background: #AACE9B;
+    border: 5px;
+    border-radius: 5px;
+}
+.user-input{
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+}
