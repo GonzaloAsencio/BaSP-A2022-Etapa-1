@@ -8,6 +8,8 @@ function checkEmail (correo){
 }
 var myregex = /^(?=.*\d)(?=.*[a-z]).{8,}$/; 
 function checkPassword(password){
+    //var text = "" + password;
+    //console.log(text.length);
    // var myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;  MAYUSCULAS INCLUIDAS
     if(myregex.test(password)){
        return true;        
@@ -43,11 +45,11 @@ window.onload = function () {
         }
     }
     userPassword.onfocus = function (){
-        if (userPassword.value !== ''){
-            if(!checkPassword(userPassword.value)){
+        if (userPassword.value !== '' &&!checkPassword(userPassword.value)){
+           
                 CancelInputWarning(userPassword);
                 DeleteWarning();
-            }       
+                  
         }
     }
     loginButton.onclick = function (e){
