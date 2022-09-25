@@ -14,7 +14,7 @@ main {
     border: 2px solid black;
     background-color: rgb(255, 255, 255);
     width: 370px;
-    height: 600px;
+    height: 640px;
 }
 .form > h2{
     padding: 20px;
@@ -43,17 +43,16 @@ main {
 }
 .input-warp > input {
     padding: 10px 12px;
-    border: 1px solid #373867;
-    border-radius: 4px;
+    
 }
 .input-password{
     display: flex;
 }
 .create-button{
-    margin-top: 30px;
     text-align: center;
 }
 input[type="button"]{
+    margin-top: 20px;
     align-items: center;
     padding: 14px 36px;
     font-weight: 500;
@@ -67,4 +66,17 @@ input[type="button"]{
     flex-flow: row wrap;
     display: flex;
     justify-content: center;
+}
+
+.user-account{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-error{
+    color:  #F13312;
+}
+.border-error{
+   border: 2px solid #F13312;
 }

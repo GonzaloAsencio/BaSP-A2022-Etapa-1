@@ -1,3 +1,26 @@
+function hasNumber(word){
+    for (let index = 0; index < word.length; index++){
+        if(!isNaN(word[index])){
+            return true;
+        }
+    }
+    return false;
+}
+function hasLetter(word){
+    for (let index = 0; index < word.length; index++){
+            if(isNaN(word[index])){
+            return true;
+        }
+    }
+        return false;
+}
+function LetterCounter(word,number){
+    if(word.length >= number){
+        return true;
+    }else{
+        return false;
+    }
+}
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 function checkEmail (correo){
     if (emailExpression.test(correo)){
@@ -6,25 +29,20 @@ function checkEmail (correo){
         return false;       
     }
 }
-var myregex = /^(?=.*\d)(?=.*[a-z]).{8,}$/; 
 function checkPassword(password){
-    //var text = "" + password;
-    //console.log(text.length);
-   // var myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;  MAYUSCULAS INCLUIDAS
-    if(myregex.test(password)){
-       return true;        
-   }else{
-       return false;        
-   }   
+    if(LetterCounter(password,8) && hasNumber(password) && hasLetter(password)){
+        return true;        
+    }else{
+        return false;        
+    }   
  }
  
-
 window.onload = function () {
     var userEmail = document.getElementById("userEmail");
     var userPassword = document.getElementById("userPassword");
     var loginButton = document.getElementById("loginButton");
     var userAccount = document.getElementById("userAccount");
-    
+
     userEmail.onblur = function (){
         if (!checkEmail(userEmail.value) && userEmail.value !== ''){
             CreateWarning(userEmail);
@@ -37,7 +55,6 @@ window.onload = function () {
             CancelInputWarning(userEmail);
         }
     }
-    //**************------------------------*******/
     userPassword.onblur = function (){
         if (!checkPassword(userPassword.value) && userPassword.value !== ''){
             CreateWarning(userPassword);
@@ -46,10 +63,8 @@ window.onload = function () {
     }
     userPassword.onfocus = function (){
         if (userPassword.value !== '' &&!checkPassword(userPassword.value)){
-           
-                CancelInputWarning(userPassword);
-                DeleteWarning();
-                  
+            CancelInputWarning(userPassword);
+            DeleteWarning();
         }
     }
     loginButton.onclick = function (e){
@@ -68,10 +83,7 @@ window.onload = function () {
           alert("Email: " + userEmail.value + " Contraseña: " + userPassword.value);
         }
     }
-
-    
     function CreateWarning(inputName){   
-
         var elementNameExists = document.getElementById("warningBox");
         var warningDiv = document.createElement("div");
         var warningText = document.createElement("h2");
@@ -91,8 +103,6 @@ window.onload = function () {
         var elementNameExists = document.getElementById("warningBox");
         if (elementNameExists){
             elementNameExists.remove();
-        }else{
-            //No hay nada
         }
     }
     function InputWarining(input){
