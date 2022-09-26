@@ -21,6 +21,13 @@ function LetterCounter(word,number){
         return false;
     }
 }
+function removeItem(arr, item) {
+    for(var i = arr.length; i--;) {
+        if(arr[i] === item) {
+            arr.splice(i, 1);
+        }
+    }
+}
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 function checkEmail (correo){
     if (emailExpression.test(correo)){
@@ -36,21 +43,27 @@ function checkPassword(password){
         return false;        
     }   
  }
- 
 window.onload = function () {
     var userEmail = document.getElementById("userEmail");
     var userPassword = document.getElementById("userPassword");
     var loginButton = document.getElementById("loginButton");
     var userAccount = document.getElementById("userAccount");
-
+    var errorsMessaage = [];
+    var loginErrors = {
+        email: 'Invalid Email',
+        password: 'Invalid password'
+      }
+ 
     userEmail.onblur = function (){
         if (!checkEmail(userEmail.value) && userEmail.value !== ''){
             CreateWarning(userEmail);
             InputWarining(userEmail);
+            errorsMessaage.push(loginErrors.email);
         }
     }
     userEmail.onfocus = function (){
         if (!checkEmail(userEmail.value)){
+            removeItem(errorsMessaage,loginErrors.email);
             DeleteWarning();
             CancelInputWarning(userEmail);
         }
@@ -59,28 +72,25 @@ window.onload = function () {
         if (!checkPassword(userPassword.value) && userPassword.value !== ''){
             CreateWarning(userPassword);
             InputWarining(userPassword);
+            errorsMessaage.push(loginErrors.password);   
         }
     }
     userPassword.onfocus = function (){
         if (userPassword.value !== '' &&!checkPassword(userPassword.value)){
+            removeItem(errorsMessaage,loginErrors.password);
             CancelInputWarning(userPassword);
             DeleteWarning();
         }
     }
     loginButton.onclick = function (e){
         e.preventDefault();
-        if(!checkEmail(userEmail.value) && userEmail.value !== '' ){
-            InputWarining(userEmail);
-            CreateWarning(userEmail);
-            alert("Wrong Email");
-        }
-        if (!checkPassword(userPassword.value) && userPassword.value !== ''){
-            InputWarining(userPassword);
-            CreateWarning(userPassword);
-            alert("Wrong Password");
-        }
-        if (checkEmail(userEmail.value) && checkPassword(userPassword.value)){
-          alert("Email: " + userEmail.value + " Contraseña: " + userPassword.value);
+        if (checkPassword(userPassword.value) && checkEmail(userEmail.value)){
+          alert("Form loaded correctly, your data is: " + "Email: " + userEmail.value + " Contraseña: " + userPassword.value);
+        }else {
+            if(errorsMessaage.length === 0){
+                alert("There are empty spaces in the forms");
+            }else
+            alert("Form loaded incorrectly, the errors are:" + errorsMessaage.join('-'));
         }
     }
     function CreateWarning(inputName){   

@@ -68,8 +68,8 @@ function ValidateZipcode(code){
         return false;
     }
 }
-var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 function ValidaateEmail(email){
+    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     if (emailExpression.test(email)){
         return true;   
     }else{
@@ -120,6 +120,7 @@ window.onload = function () {
     var userName = document.getElementById("Name");
     var userLastname = document.getElementById("Last name");
     var userDni = document.getElementById("Dni");
+    var userBirth = document.getElementById("Date of birth");
     var userPhone = document.getElementById("Phone number");
     var userAdress = document.getElementById("Adress");
     var userLocation = document.getElementById("City");
@@ -131,106 +132,152 @@ window.onload = function () {
     var createButton = document.getElementById("createButton");
     var firstPassword;
     var secondPassword;
-
+    var errorsMessage = [];
+    var signupErrors = {
+        userName:"Invalid Email",
+        lastName:"Invalid password",
+        dni:"Invalid dni",
+        date:"Invalid date of birth",
+        phone:"Invalid phone number",
+        adress:"Invalid adress",
+        location:"Invalid location",
+        zipCode:"Invalid zip code",
+        email:"Invalid email",
+        password:"Invalid password",
+        secondPassword: "Invalid repeat password"
+    }
     userName.onblur = function (){
         if(!ValidateName(userName.value) && userName.value !== ''){
             InputWarining(userName,true);
+            errorsMessage.push(signupErrors.name);
         }
     }
     userName.onfocus = function (){
         if(!ValidateName(userName.value) && userName.value !== ''){
             InputWarining(userName,false);
+            removeError(signupErrors.name);
         }
     }
     userLastname.onblur = function (){
         if(!ValidateName(userLastname.value) && userLastname.value !== ''){
             InputWarining(userLastname,true);
+            errorsMessage.push(signupErrors.lastName);
         }
     }
     userLastname.onfocus = function (){
         if(!ValidateName(userLastname.value) && userLastname.value !== ''){
             InputWarining(userLastname,false);
+            removeError(signupErrors.lastName);
         }
     }
     userDni.onblur = function (){
         if(!ValidateDni(userDni.value) && userDni.value !== ''){
             InputWarining(userDni,true);
+            errorsMessage.push(signupErrors.dni);
         }
     }
     userDni.onfocus = function (){
         if(!ValidateDni(userDni.value) && userDni.value !== ''){
             InputWarining(userDni,false);
+            removeError(signupErrors.dni);
+        }
+    }
+    userBirth.onblur = function (){
+        if(userBirth.value === ''){
+            InputWarining(userBirth,true);
+            errorsMessage.push(signupErrors.userBirth);
+        }
+    }
+    userBirth.onfocus = function (){
+        console.log(userBirth.value);
+        if(userBirth.value !== null){
+            InputWarining(userBirth,false);
+            removeError(signupErrors.userBirth);
         }
     }
     userPhone.onblur = function (){
         if(!ValidatePhone(userPhone.value) && userPhone.value !== ''){
             InputWarining(userPhone,true);
+            errorsMessage.push(signupErrors.userPhone);
         }
     }
     userPhone.onfocus = function (){
         if(!ValidatePhone(userPhone.value) && userPhone.value !== ''){
             InputWarining(userPhone,false);
+            removeError(signupErrors.phone);
         }
     }
     userAdress.onblur = function (){
         if(!ValidateAdress(userAdress.value) && userAdress.value !== ''){
             InputWarining(userAdress,true);
+            errorsMessage.push(signupErrors.adress);
         }
     }
     userAdress.onfocus = function (){
         if(!ValidateAdress(userPhone.value) && userAdress.value !== ''){
             InputWarining(userAdress,false);
+            removeError(signupErrors.adress);
         }
     }
     userLocation.onblur = function (){
         if(!ValidateLocation(userLocation.value) && userLocation.value !== ''){
             InputWarining(userLocation,true);
+            errorsMessage.push(signupErrors.location);
         }
     }
     userLocation.onfocus = function (){
         if(!ValidateLocation(userLocation.value) && userLocation.value !== ''){
             InputWarining(userLocation,false);
+            removeError(signupErrors.location);
         }
     }
     userZipcode.onblur = function (){
         if(!ValidateZipcode(userZipcode.value) && userZipcode.value !== ''){
             InputWarining(userZipcode,true);
+            errorsMessage.push(signupErrors.zipCode);
         }
     }
     userZipcode.onfocus = function (){
         if(!ValidateZipcode(userZipcode.value) && userZipcode.value !== ''){
             InputWarining(userZipcode,false);
+            removeError(signupErrors.zipCode);
         }
     }
     userEmail.onblur = function (){
         if (!ValidaateEmail(userEmail.value) && userEmail.value !== ''){
             InputWarining(userEmail,true);
+            errorsMessage.push(signupErrors.email);
         }
     }
     userEmail.onfocus = function (){
         if (!ValidaateEmail(userEmail.value) && userEmail.value !== ''){
             InputWarining(userEmail,false);
+            removeError(signupErrors.email);
         }
     }
     userPassword.onblur = function (){
         if (!ValidatePassword(userPassword.value) && userPassword.value !== ''){
             InputWarining(userPassword,true);
+            errorsMessage.push(signupErrors.password);
         }else{
-                firstPassword = userPassword.value;
+            firstPassword = userPassword.value;
         }
     }
     userPassword.onfocus = function (){
         if (userPassword.value !== '' && !ValidatePassword(userPassword.value)){
             InputWarining(userPassword,false);
+            removeError(signupErrors.password);
         }
     }
     userSecondpassword.onblur = function (){
         if (!ValidatePassword(userSecondpassword.value) && userSecondpassword.value !== ''){
             InputWarining(userSecondpassword,true);
+            errorsMessage.push(signupErrors.secondPassword);
         }
         if(userSecondpassword.value !== ''){
             secondPassword = userSecondpassword.value;
             if (firstPassword !== '' && firstPassword!== secondPassword){
+                errorsMessage.push(signupErrors.secondPassword);
                 InputWarining(userSecondpassword,true);
             }
         }
@@ -238,11 +285,33 @@ window.onload = function () {
     userSecondpassword.onfocus = function (){
         if (userSecondpassword.value !== '' && !ValidatePassword(userSecondpassword.value) || firstPassword !== secondPassword){
             InputWarining(userSecondpassword,false);
+            removeError(signupErrors.secondPassword);
         }
     }
     createButton.onclick = function (e){
         e.preventDefault();
-        //???
+        if(ValidateName(userName.value) && ValidateName(userLastname.value) && ValidateDni(userDni.value) && 
+        ValidatePhone(userPhone.value) && ValidateAdress(userAdress.value) && ValidateLocation(userLocation.value)
+        && ValidateZipcode(userZipcode.value) && ValidaateEmail(userEmail.value) && ValidatePassword(userPassword.value)
+        && ValidatePassword(userSecondpassword.value) && (userBirth.value !== null)){
+        alert("Form loaded correctly, your data is: " + "Name: " + userName.value+ " Last Name: " + userLastname.value
+        + " DNI: " + userDni.value + " Date of birth: " + userBirth.value + " Phone: " + userPhone.value + " Adress: " + userAdress.value
+        + " Location: " + userLocation.value + " Zip code: " + userZipcode.value + " Email:" + userEmail.value
+        + " Password: " + userPassword.value + " Repeat password: " + userSecondpassword.value);
+        }else{
+            if(errorsMessage.length === 0){
+                alert("All from are empty");
+            }else{
+                alert("Form loaded incorrectly, the errors are: " + errorsMessage.join(" - "));
+            }    
+        }
+    }
+function removeError(item) {
+        for(var i = errorsMessage.length; i--;) {
+            if(errorsMessage[i] === item) {
+                errorsMessage.splice(i, 1);
+            }
+        }
     }
 }   
 
