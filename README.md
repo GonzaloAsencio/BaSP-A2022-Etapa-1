@@ -4,14 +4,15 @@ Trackgenix is a human resource application designed to load the number of employ
 
 # How to Open 📂
 ```bash
-1- Access to the folder "Semana-05".
-2- Open the file "index.html" on your favourite browser.
+1- Access to the folder "Semana-06".
+2- Open the folder "views".
+3- Open the file "login.html" or "employee-signup.html", on your favourite browser.
 ```
 # Tech 💻
 The following technologies are currently being used:
 
 - [Figma](https://www.figma.com/) - Visual Web
-- [Visual Studio Code](https://code.visualstudio.com) - HTML
+- [Visual Studio Code](https://code.visualstudio.com) - HTML and Java script
 - [GitHub - Git](https://github.com) - Control Version
 
 ---------------
@@ -45,6 +46,11 @@ The following technologies are currently being used:
  ### __Week 05__
 *** 
 >I did the java script exercises and fixed the errors from last week.
+>
+***
+ ### __Week 06__
+*** 
+>I did the login screen and employee sign up login in html.Then, I made the different styles for each page in css.Finally, I did all the logic in javascript.
 >
 
 ***
