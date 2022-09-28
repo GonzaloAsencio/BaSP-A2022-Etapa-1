@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="../styles/body.css">
         <link rel="stylesheet" href="../styles/header.css">
         <link rel="stylesheet" href="../styles/aside.css">
-        <link rel="stylesheet" href="../styles/login.css">
+        <link rel="stylesheet" href="../styles/contact.css">
         <link rel="stylesheet" href="../styles/footer.css">
-        <script src="../javascript/login.js"></script>
+        <script src="../javascript/contact.js"></script>
         <title>Trackgenix</title>
     </head>
     <body>
@@ -61,28 +61,29 @@
             <main>
                 <section class="main-logincontiner">  
                     <form action="" class="login-form">
-                        <h2>Login</h2>
+                        <h2>Contact</h2>
                         <div class="user-input">
-                            <label for="">Email</label>
-                            <input type="text" id ="userEmail" placeholder="example@email.com">
+                            <label>Name</label>
+                            <input type="text" name ="" id ="userName" placeholder="Name">
                         </div>
                         <div class="user-input">
-                            <label for=""> Password</label>
-                            <input type="password" id ="userPassword" placeholder="*******">
+                            <label>Email</label>
+                            <input type="text" name ="" id ="userEmail" placeholder="example@email.com">
                         </div>
-                        <div class="user-account" id="userAccount">
-                            <div class="user-conteiner">
-                                <span>
-                                    Dont have an Account?
-                                </span>
-                                <a href="employee-signup.html">Sing Up</a>
-                            </div>
-                            <div>
-                                <a href=""> Forgot your password?</a>
-                            </div>
+                        <div class="user-input">
+                            <label id ="contactArea">Contact Area</label>
+                            <select>
+                                <option value="Human Resource">Human Resources</option>
+                                <option value="System">System</option>
+                                <option value="Commercialization">Commercialization</option>
+                            </select>
                         </div>
-                        <div class="login-button">
-                            <input id="loginButton" type="button" value="LOGIN">
+                        <div class="user-input">
+                            <textarea name="Message" placeholder="Message" id="Message"></textarea>
+                        </div>
+                        <div class="user-account" id="userAccount"></div>
+                        <div class="send-button">
+                            <input id="sendButton" type="button" value="SEND">
                         </div>
                     </form>                  
                 </section>

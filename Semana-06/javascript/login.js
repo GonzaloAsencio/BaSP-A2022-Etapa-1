@@ -14,7 +14,7 @@ function hasLetter(word){
     }
         return false;
 }
-function LetterCounter(word,number){
+function letterCounter(word,number){
     if(word.length >= number){
         return true;
     }else{
@@ -29,20 +29,53 @@ function removeItem(arr, item) {
     }
 }
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-function checkEmail (correo){
+function validateEmail (correo){
     if (emailExpression.test(correo)){
         return true;   
     }else{
         return false;       
     }
 }
-function checkPassword(password){
-    if(LetterCounter(password,8) && hasNumber(password) && hasLetter(password)){
+function validatePassword(password){
+    if(letterCounter(password,8) && hasNumber(password) && hasLetter(password)){
         return true;        
     }else{
         return false;        
     }   
- }
+}
+function CreateWarning(inputError){   
+    var elementName = document.getElementById("warningBox");
+    var warningDiv = document.createElement("div");
+    var warningText = document.createElement("h2");
+    warningText.innerHTML = "Invalid " + inputError.id;
+    warningDiv.appendChild(warningText);
+    warningDiv.setAttribute("id","warningBox");
+    warningDiv.classList.add("text-error");
+    if (!elementName){
+        userAccount.prepend(warningDiv);
+    }else if (elementName){
+        var selector = document.querySelector("#warningBox > h2");
+        selector.textContent = warningText.innerHTML;
+    }
+}
+function deleteWarning(){
+    var elementNameExists = document.getElementById("warningBox");
+    if (elementNameExists){
+        elementNameExists.remove();
+    }
+}
+function inputWarining(input,activate){
+    if(activate){
+        CreateWarning(input);
+        input.classList.add("text-error");
+        input.classList.add("border-error");
+    }else{
+        deleteWarning();
+        input.value = '';
+        input.classList.remove("border-error");
+        input.classList.remove("text-error");
+    }
+}
 window.onload = function () {
     var userEmail = document.getElementById("userEmail");
     var userPassword = document.getElementById("userPassword");
@@ -50,41 +83,37 @@ window.onload = function () {
     var userAccount = document.getElementById("userAccount");
     var errorsMessaage = [];
     var loginErrors = {
-        email: 'Invalid Email',
-        password: 'Invalid password'
+        email: "Invalid Email",
+        password: "Invalid password"
       }
  
     userEmail.onblur = function (){
-        if (!checkEmail(userEmail.value) && userEmail.value !== ''){
-            CreateWarning(userEmail);
-            InputWarining(userEmail);
+        if (!validateEmail(userEmail.value) && userEmail.value !== ''){
+            inputWarining(userEmail,true);
             errorsMessaage.push(loginErrors.email);
         }
     }
     userEmail.onfocus = function (){
-        if (!checkEmail(userEmail.value)){
+        if (!validateEmail(userEmail.value)){
             removeItem(errorsMessaage,loginErrors.email);
-            DeleteWarning();
-            CancelInputWarning(userEmail);
+            inputWarining(userEmail,false);
         }
     }
     userPassword.onblur = function (){
-        if (!checkPassword(userPassword.value) && userPassword.value !== ''){
-            CreateWarning(userPassword);
-            InputWarining(userPassword);
+        if (!validatePassword(userPassword.value) && userPassword.value !== ''){
+            inputWarining(userPassword,true);
             errorsMessaage.push(loginErrors.password);   
         }
     }
     userPassword.onfocus = function (){
-        if (userPassword.value !== '' &&!checkPassword(userPassword.value)){
+        if (userPassword.value !== '' &&!validatePassword(userPassword.value)){
             removeItem(errorsMessaage,loginErrors.password);
-            CancelInputWarning(userPassword);
-            DeleteWarning();
+            inputWarining(userPassword,false);
         }
     }
     loginButton.onclick = function (e){
         e.preventDefault();
-        if (checkPassword(userPassword.value) && checkEmail(userEmail.value)){
+        if (validatePassword(userPassword.value) && validateEmail(userEmail.value)){
           alert("Form loaded correctly, your data is: " + "Email: " + userEmail.value + " Contraseña: " + userPassword.value);
         }else {
             if(errorsMessaage.length === 0){
@@ -93,35 +122,4 @@ window.onload = function () {
             alert("Form loaded incorrectly, the errors are:" + errorsMessaage.join('-'));
         }
     }
-    function CreateWarning(inputName){   
-        var elementNameExists = document.getElementById("warningBox");
-        var warningDiv = document.createElement("div");
-        var warningText = document.createElement("h2");
-        warningText.innerHTML = "Wrong " + inputName.id;
-        warningDiv.appendChild(warningText);
-        warningDiv.setAttribute("id","warningBox");
-        warningDiv.classList.add("text-error");
-
-        if (!elementNameExists){
-            userAccount.prepend(warningDiv);
-        }else if (elementNameExists) {
-            var selector = document.querySelector("#warningBox > h2");
-            selector.textContent = warningText.innerHTML;
-         }
-    }
-    function DeleteWarning(){
-        var elementNameExists = document.getElementById("warningBox");
-        if (elementNameExists){
-            elementNameExists.remove();
-        }
-    }
-    function InputWarining(input){
-        input.classList.add("text-error");
-        input.classList.add("border-error");
-     }
-     function CancelInputWarning(input){
-        input.value = '';
-        input.classList.remove("border-error");
-        input.classList.remove("text-error");
-     }
 }
