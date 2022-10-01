@@ -1,0 +1,45 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30px;
+    background-color: #AACE9B;
+}
+header img{
+    width: 10px;
+    height: 8px;
+    padding-left:10px;
+}
+header input{
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid #AACE9B;
+    background: #FAFBFD url("/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Button\ Search.png") no-repeat 5px center;
+    background-size: 8px 8px;
+}
+@media(min-width : 834px){
+    header{
+        height: 92px;    
+    }
+    header img {
+        display: none;
+    }
+}
+@media(min-width : 1512px){
+    header{
+        height: 126px;    
+    }
+    header img {
+        display: none;
+    }
+    header input{
+        width: 377px;
+        height: 36px;
+        border-radius: 50px;
+        background: #FAFBFD url("/Users/Gonza/Documents/GitHub/BaSP-A2022-Etapa-1/assets/icons/Button\ Search.png") no-repeat 14px center;
+        background-size: 20px 20px;
+    }
+}
