@@ -84,22 +84,17 @@ function validatePassword(password){
    }   
 }
 function createWarning(inputError){   
-    var elementName = document.getElementById("warningBox");
     var warningDiv = document.createElement("div");
     var warningText = document.createElement("h2");
     warningText.innerHTML = "Invalid " + inputError.id;
     warningDiv.appendChild(warningText);
     warningDiv.setAttribute("id","warningBox");
     warningDiv.classList.add("text-error");
-    if (!elementName){
-        userAccount.prepend(warningDiv);
-    }else if (elementName){
-        var selector = document.querySelector("#warningBox > h2");
-        selector.textContent = warningText.innerHTML;
-    }
+    inputError.insertAdjacentElement("afterend",warningDiv);
 }
-function deleteWarning(){
-    var elementNameExists = document.getElementById("warningBox");
+function deleteWarning(input){
+    var search = input.parentElement;
+    var elementNameExists = search.querySelector("#warningBox");
     if (elementNameExists){
         elementNameExists.remove();
     }
@@ -110,11 +105,33 @@ function inputWarining(input,activate){
         input.classList.add("text-error");
         input.classList.add("border-error");
     }else{
-        deleteWarning();
+        deleteWarning(input);
         input.value = '';
         input.classList.remove("border-error");
         input.classList.remove("text-error");
     }
+}
+function validateURL(url){
+    fetch(url)
+       .then(function(res){
+           return res.json();
+       })
+       .then(function (data){
+        console.log(data);
+           if(!data.success){
+              throw new Error(data.msg);
+           }
+           Object.entries(data.data).forEach(element => {
+            const [key, value] = element;
+            console.log(key, value);
+            localStorage.setItem(key,value);
+            });
+              /* alert("Succes: " + data.success + "\n" + "email:" +
+               userEmail.value + "\n" + "Password: " + userPassword.value + + "\n" + "Request: " + data.msg);*/
+        })
+       .catch(function(error){
+           alert(error);
+});
 }
 window.onload = function () {
     var userName = document.getElementById("Name");
@@ -290,14 +307,32 @@ window.onload = function () {
     }
     createButton.onclick = function (e){
         e.preventDefault();
+        var name = "gonzalo";
+        var lastName = "Asencio";
+        var dni = "12345678";
+        var dob =  dateFormat(userBirth.value);
+        var phone = "0123456789";
+        var address = "asds 1666";
+        var location = "rosario";
+        var zip = "20001";
+        var email ="rose@radiumrocket.com";
+        var password = "BaSP2022";
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + name+ '&lastName=' + lastName
+        +'&dni=' + dni + '&dob=' + dob + '&phone='+ phone +'&address=' +address +'&city=' + location
+        + '&zip='+ zip + '&email=' + email + '&password=' +password;
+        validateURL(url);
         if(validateName(userName.value) && validateName(userLastname.value) && validateDni(userDni.value) && 
         validatePhone(userPhone.value) && validateAdress(userAdress.value) && validateLocation(userLocation.value)
         && validateZipcode(userZipcode.value) && validateEmail(userEmail.value) && validatePassword(userPassword.value)
         && validatePassword(userSecondpassword.value) && (userBirth.value !== null)){
-        alert("Form loaded correctly, your data is: " + "Name: " + userName.value+ " Last Name: " + userLastname.value
+           /* var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + userName.value + '&lastName=' + userLastname.value
+            + '&dni=' + userDni.value + '&dob=' + userBirth.value + '&phone='+ userPhone.value +'&address=' + userAdress.value +'&city=' + userLocation.value
+            + '&zip='+ userZipcode.value + '&email=' + userEmail.value + '&password=' + userPassword.value;*/  
+           // validateURL(url);
+       /* alert("Form loaded correctly, your data is: " + "Name: " + userName.value+ " Last Name: " + userLastname.value
         + " DNI: " + userDni.value + " Date of birth: " + userBirth.value + " Phone: " + userPhone.value + " Adress: " + userAdress.value
         + " Location: " + userLocation.value + " Zip code: " + userZipcode.value + " Email:" + userEmail.value
-        + " Password: " + userPassword.value + " Repeat password: " + userSecondpassword.value);
+        + " Password: " + userPassword.value + " Repeat password: " + userSecondpassword.value);*/
         }else{
             if(errorsMessage.length === 0){
                 alert("All from are empty");
@@ -313,5 +348,10 @@ function removeError(item) {
         }
     }
 }
+function dateFormat(dates){
+    var [year,month,day] = dates.split('-');
+    var birthChange = [month,day,year].join('/');
+    return birthChange;
+}   
 }   
 
