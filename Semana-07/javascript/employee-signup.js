@@ -28,7 +28,7 @@ function validateName(name){
     return false;
 }
 function validateDni(dni){
-    if(letterCounter(dni,7) && !hasLetter(dni) && hasNumber(dni)){
+    if(dni.length <= 8  && !hasLetter(dni) && hasNumber(dni)){
         return true;
     }else{
         return false;
@@ -41,10 +41,15 @@ function validatePhone(phone){
         return false;
     }
 }
-function validateAdress(adress){
-    var direction = adress.substring(0,adress.indexOf(" "));
-    var numbers = adress.substring(adress.length - adress.indexOf(" "));
-    if(!hasNumber(direction) && direction.length >=5 && hasNumber(numbers)){
+function validateAddress(address){
+    var letter = 0;
+    var spaceOut = address.trim();
+    for (let index = 0; index < spaceOut.length; index++){
+        if(hasLetter(spaceOut[index])){
+          letter++;
+        }
+    }
+    if(spaceOut.includes(" ") && letter > 3 ){
       return true;
     }else{
         return false;
@@ -112,25 +117,31 @@ function inputWarining(input,activate){
     }
 }
 function validateURL(url){
+    var information = "";
     fetch(url)
        .then(function(res){
            return res.json();
        })
        .then(function (data){
-        console.log(data);
            if(!data.success){
-              throw new Error(data.msg);
-           }
-           Object.entries(data.data).forEach(element => {
-            const [key, value] = element;
-            console.log(key, value);
-            localStorage.setItem(key,value);
+            var error = "";
+            Object.entries(data.errors).forEach(element => {
+                var [key,value] = element;
+                error += value.param + ": "+ value.msg + "\n ";
             });
-              /* alert("Succes: " + data.success + "\n" + "email:" +
-               userEmail.value + "\n" + "Password: " + userPassword.value + + "\n" + "Request: " + data.msg);*/
+              throw new Error(error);
+           }else{
+            Object.entries(data.data).forEach(element => {
+                const [key, value] = element;
+                console.log(key, value);
+                information += key +":"+ " " + value + "\n";  
+                localStorage.setItem(key,value);
+                });
+                alert("Succes: " + data.success + "\n" + information + "\n" + "Request: " + data.msg);
+           }
         })
        .catch(function(error){
-           alert(error);
+           alert(error + "\n");
 });
 }
 window.onload = function () {
@@ -139,13 +150,12 @@ window.onload = function () {
     var userDni = document.getElementById("Dni");
     var userBirth = document.getElementById("Date of birth");
     var userPhone = document.getElementById("Phone number");
-    var userAdress = document.getElementById("Adress");
+    var userAddress = document.getElementById("Adress");
     var userLocation = document.getElementById("Location");
     var userZipcode = document.getElementById("Zip code");
     var userEmail = document.getElementById("Email");
     var userPassword = document.getElementById("Password");
     var userSecondpassword = document.getElementById("Repeat password");
-    var userAccount = document.getElementById("userAccount");
     var createButton = document.getElementById("createButton");
     var firstPassword;
     var secondPassword;
@@ -206,7 +216,6 @@ window.onload = function () {
         }
     }
     userBirth.onfocus = function (){
-        console.log(userBirth.value);
         if(userBirth.value !== null){
             inputWarining(userBirth,false);
             removeError(signupErrors.userBirth);
@@ -224,15 +233,15 @@ window.onload = function () {
             removeError(signupErrors.phone);
         }
     }
-    userAdress.onblur = function (){
-        if(!validateAdress(userAdress.value) && userAdress.value !== ''){
-            inputWarining(userAdress,true);
+    userAddress.onblur = function (){
+        if(!validateAddress(userAddress.value) && userAddress.value !== ''){
+            inputWarining(userAddress,true);
             errorsMessage.push(signupErrors.adress);
         }
     }
-    userAdress.onfocus = function (){
-        if(!validateAdress(userPhone.value) && userAdress.value !== ''){
-            inputWarining(userAdress,false);
+    userAddress.onfocus = function (){
+        if(!validateAddress(userPhone.value) && userAddress.value !== ''){
+            inputWarining(userAddress,false);
             removeError(signupErrors.adress);
         }
     }
@@ -307,8 +316,8 @@ window.onload = function () {
     }
     createButton.onclick = function (e){
         e.preventDefault();
-        var name = "gonzalo";
-        var lastName = "Asencio";
+         var name = "gonza14";
+        var lastName = "Asencio4418";
         var dni = "12345678";
         var dob =  dateFormat(userBirth.value);
         var phone = "0123456789";
@@ -322,17 +331,14 @@ window.onload = function () {
         + '&zip='+ zip + '&email=' + email + '&password=' +password;
         validateURL(url);
         if(validateName(userName.value) && validateName(userLastname.value) && validateDni(userDni.value) && 
-        validatePhone(userPhone.value) && validateAdress(userAdress.value) && validateLocation(userLocation.value)
+        validatePhone(userPhone.value) && validateAddress(userAddress.value) && validateLocation(userLocation.value)
         && validateZipcode(userZipcode.value) && validateEmail(userEmail.value) && validatePassword(userPassword.value)
         && validatePassword(userSecondpassword.value) && (userBirth.value !== null)){
-           /* var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + userName.value + '&lastName=' + userLastname.value
-            + '&dni=' + userDni.value + '&dob=' + userBirth.value + '&phone='+ userPhone.value +'&address=' + userAdress.value +'&city=' + userLocation.value
-            + '&zip='+ userZipcode.value + '&email=' + userEmail.value + '&password=' + userPassword.value;*/  
-           // validateURL(url);
-       /* alert("Form loaded correctly, your data is: " + "Name: " + userName.value+ " Last Name: " + userLastname.value
-        + " DNI: " + userDni.value + " Date of birth: " + userBirth.value + " Phone: " + userPhone.value + " Adress: " + userAdress.value
-        + " Location: " + userLocation.value + " Zip code: " + userZipcode.value + " Email:" + userEmail.value
-        + " Password: " + userPassword.value + " Repeat password: " + userSecondpassword.value);*/
+        /*  var dob =  dateFormat(userBirth.value);
+            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + userName.value + '&lastName=' + userLastname.value
+            + '&dni=' + userDni.value + '&dob=' + dob + '&phone='+ userPhone.value +'&address=' + userAddress.value +'&city=' + userLocation.value
+            + '&zip='+ userZipcode.value + '&email=' + userEmail.value + '&password=' + userPassword.value;
+            validateURL(url);*/
         }else{
             if(errorsMessage.length === 0){
                 alert("All from are empty");
