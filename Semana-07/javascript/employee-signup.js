@@ -1,4 +1,4 @@
-function hasNumber(word){
+function hasNumber(word) {
     for (let index = 0; index < word.length; index++){
         if(!isNaN(word[index])){
             return true;
@@ -6,7 +6,8 @@ function hasNumber(word){
     }
     return false;
 }
-function hasLetter(word){
+
+function hasLetter(word) {
     for (let index = 0; index < word.length; index++){
             if(isNaN(word[index])){
             return true;
@@ -14,34 +15,39 @@ function hasLetter(word){
     }
         return false;
 }
-function letterCounter(word,number){
+
+function letterCounter(word,number) {
     if(word.length >= number){
         return true;
     }else{
         return false;
     }
 }
-function validateName(name){
+
+function validateName(name) {
     if(letterCounter(name,3) && hasLetter(name) && !hasNumber(name)){
      return true;
     }
     return false;
 }
-function validateDni(dni){
+
+function validateDni(dni) {
     if(dni.length <= 8  && !hasLetter(dni) && hasNumber(dni)){
         return true;
     }else{
         return false;
     }
 }
-function validatePhone(phone){
+
+function validatePhone(phone) {
     if(phone.length == 10 && !hasLetter(phone) && hasNumber(phone)){
         return true;
     }else{
         return false;
     }
 }
-function validateAddress(address){
+
+function validateAddress(address) {
     var letter = 0;
     var spaceOut = address.trim();
     for (let index = 0; index < spaceOut.length; index++){
@@ -55,14 +61,16 @@ function validateAddress(address){
         return false;
     }
 }
-function validateLocation(location){
+
+function validateLocation(location) {
     if(letterCounter(location,3) && hasLetter(location)) {
         return true;
     }else{
         return false;
     }
 }
-function validateZipcode(code){
+
+function validateZipcode(code) {
     if(!hasLetter(code) && hasNumber(code)){
         if(code.length >=4 && code.length <= 5){
             return true;
@@ -73,7 +81,8 @@ function validateZipcode(code){
         return false;
     }
 }
-function validateEmail(email){
+
+function validateEmail(email) {
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     if (emailExpression.test(email)){
         return true;   
@@ -81,30 +90,34 @@ function validateEmail(email){
         return false;       
     }
 }
-function validatePassword(password){
+
+function validatePassword(password) {
     if(letterCounter(password,8) && hasNumber(password) && hasLetter(password)){
        return true;        
    }else{
        return false;        
    }   
 }
-function createWarning(inputError){   
+
+function createWarning(inputError) {   
     var warningDiv = document.createElement("div");
     var warningText = document.createElement("h2");
-    warningText.innerHTML = "Invalid " + inputError.id;
+    warningText.innerHTML = "Invalid" + " " + inputError.id;
     warningDiv.appendChild(warningText);
     warningDiv.setAttribute("id","warningBox");
     warningDiv.classList.add("text-error");
     inputError.insertAdjacentElement("afterend",warningDiv);
 }
-function deleteWarning(input){
+
+function deleteWarning(input) {
     var search = input.parentElement;
     var elementNameExists = search.querySelector("#warningBox");
     if (elementNameExists){
         elementNameExists.remove();
     }
 }
-function inputWarining(input,activate){
+
+function inputWarining(input,activate) {
     if(activate){
         createWarning(input);
         input.classList.add("text-error");
@@ -116,7 +129,8 @@ function inputWarining(input,activate){
         input.classList.remove("text-error");
     }
 }
-function validateURL(url){
+
+function validateURL(url) {
     var information = "";
     fetch(url)
        .then(function(res){
@@ -124,12 +138,11 @@ function validateURL(url){
        })
        .then(function (data){
            if(!data.success){
-            var error = "";
             Object.entries(data.errors).forEach(element => {
                 var [key,value] = element;
-                error += value.param + ": "+ value.msg + "\n ";
+                information +=value.msg + "\n ";
             });
-              throw new Error(error);
+              throw new Error(information);
            }else{
             Object.entries(data.data).forEach(element => {
                 const [key, value] = element;
@@ -141,8 +154,8 @@ function validateURL(url){
            }
         })
        .catch(function(error){
-           alert(error + "\n");
-});
+           alert("Form loaded incorrectly, the errors are: "+ "\n" + error + "\n");
+    });
 }
 window.onload = function () {
     var userName = document.getElementById("Name");
@@ -159,205 +172,184 @@ window.onload = function () {
     var createButton = document.getElementById("createButton");
     var firstPassword;
     var secondPassword;
-    var errorsMessage = [];
-    var signupErrors = {
-        userName:"Invalid Email",
-        lastName:"Invalid password",
-        dni:"Invalid dni",
-        date:"Invalid date of birth",
-        phone:"Invalid phone number",
-        adress:"Invalid adress",
-        location:"Invalid location",
-        zipCode:"Invalid zip code",
-        email:"Invalid email",
-        password:"Invalid password",
-        secondPassword: "Invalid repeat password"
-    }
-    userName.onblur = function (){
+
+    userName.value= localStorage.getItem("name");
+    userLastname.value= localStorage.getItem("lastName");
+    userDni.value = localStorage.getItem("dni");
+    userBirth.value = localStorage.getItem("dob");
+    userPhone.value = localStorage.getItem("phone");
+    userAddress.value = localStorage.getItem("address");
+    userLocation.value = localStorage.getItem("city");
+    userZipcode.value = localStorage.getItem("zip");
+    userEmail.value = localStorage.getItem("email");
+    userPassword.value = localStorage.getItem("password");
+    userSecondpassword.value =localStorage.getItem("password");
+
+    userName.onblur = function () {
         if(!validateName(userName.value) && userName.value !== ''){
             inputWarining(userName,true);
-            errorsMessage.push(signupErrors.name);
         }
     }
-    userName.onfocus = function (){
+
+    userName.onfocus = function () {
         if(!validateName(userName.value) && userName.value !== ''){
             inputWarining(userName,false);
             removeError(signupErrors.name);
         }
     }
-    userLastname.onblur = function (){
+
+    userLastname.onblur = function () {
         if(!validateName(userLastname.value) && userLastname.value !== ''){
             inputWarining(userLastname,true);
-            errorsMessage.push(signupErrors.lastName);
         }
     }
-    userLastname.onfocus = function (){
+
+    userLastname.onfocus = function () {
         if(!validateName(userLastname.value) && userLastname.value !== ''){
             inputWarining(userLastname,false);
             removeError(signupErrors.lastName);
         }
     }
-    userDni.onblur = function (){
+
+    userDni.onblur = function () {
         if(!validateDni(userDni.value) && userDni.value !== ''){
             inputWarining(userDni,true);
-            errorsMessage.push(signupErrors.dni);
         }
     }
-    userDni.onfocus = function (){
+
+    userDni.onfocus = function () {
         if(!validateDni(userDni.value) && userDni.value !== ''){
             inputWarining(userDni,false);
             removeError(signupErrors.dni);
         }
     }
-    userBirth.onblur = function (){
+
+    userBirth.onblur = function () {
         if(userBirth.value === ''){
             inputWarining(userBirth,true);
-            errorsMessage.push(signupErrors.userBirth);
         }
     }
-    userBirth.onfocus = function (){
+
+    userBirth.onfocus = function () {
         if(userBirth.value !== null){
             inputWarining(userBirth,false);
             removeError(signupErrors.userBirth);
         }
     }
-    userPhone.onblur = function (){
+
+    userPhone.onblur = function () {
         if(!validatePhone(userPhone.value) && userPhone.value !== ''){
             inputWarining(userPhone,true);
-            errorsMessage.push(signupErrors.userPhone);
         }
     }
-    userPhone.onfocus = function (){
+
+    userPhone.onfocus = function () {
         if(!validatePhone(userPhone.value) && userPhone.value !== ''){
             inputWarining(userPhone,false);
             removeError(signupErrors.phone);
         }
     }
-    userAddress.onblur = function (){
+
+    userAddress.onblur = function () {
         if(!validateAddress(userAddress.value) && userAddress.value !== ''){
             inputWarining(userAddress,true);
-            errorsMessage.push(signupErrors.adress);
         }
     }
-    userAddress.onfocus = function (){
+
+    userAddress.onfocus = function () {
         if(!validateAddress(userPhone.value) && userAddress.value !== ''){
             inputWarining(userAddress,false);
             removeError(signupErrors.adress);
         }
     }
-    userLocation.onblur = function (){
+
+    userLocation.onblur = function () {
         if(!validateLocation(userLocation.value) && userLocation.value !== ''){
             inputWarining(userLocation,true);
-            errorsMessage.push(signupErrors.location);
         }
     }
-    userLocation.onfocus = function (){
+
+    userLocation.onfocus = function () {
         if(!validateLocation(userLocation.value) && userLocation.value !== ''){
             inputWarining(userLocation,false);
             removeError(signupErrors.location);
         }
     }
-    userZipcode.onblur = function (){
+
+    userZipcode.onblur = function () {
         if(!validateZipcode(userZipcode.value) && userZipcode.value !== ''){
             inputWarining(userZipcode,true);
-            errorsMessage.push(signupErrors.zipCode);
         }
     }
-    userZipcode.onfocus = function (){
+
+    userZipcode.onfocus = function () {
         if(!validateZipcode(userZipcode.value) && userZipcode.value !== ''){
             inputWarining(userZipcode,false);
             removeError(signupErrors.zipCode);
         }
     }
-    userEmail.onblur = function (){
+
+    userEmail.onblur = function () {
         if (!validateEmail(userEmail.value) && userEmail.value !== ''){
             inputWarining(userEmail,true);
-            errorsMessage.push(signupErrors.email);
         }
     }
-    userEmail.onfocus = function (){
+
+    userEmail.onfocus = function () {
         if (!validateEmail(userEmail.value) && userEmail.value !== ''){
             inputWarining(userEmail,false);
             removeError(signupErrors.email);
         }
     }
-    userPassword.onblur = function (){
+
+    userPassword.onblur = function () {
         if (!validatePassword(userPassword.value) && userPassword.value !== ''){
             inputWarining(userPassword,true);
-            errorsMessage.push(signupErrors.password);
         }else{
             firstPassword = userPassword.value;
         }
     }
-    userPassword.onfocus = function (){
+
+    userPassword.onfocus = function () {
         if (userPassword.value !== '' && !validatePassword(userPassword.value)){
             inputWarining(userPassword,false);
             removeError(signupErrors.password);
         }
     }
-    userSecondpassword.onblur = function (){
+
+    userSecondpassword.onblur = function () {
         if (!validatePassword(userSecondpassword.value) && userSecondpassword.value !== ''){
             inputWarining(userSecondpassword,true);
-            errorsMessage.push(signupErrors.secondPassword);
         }
         if(userSecondpassword.value !== ''){
             secondPassword = userSecondpassword.value;
             if (firstPassword !== '' && firstPassword!== secondPassword){
-                errorsMessage.push(signupErrors.secondPassword);
                 inputWarining(userSecondpassword,true);
             }
         }
     } 
-    userSecondpassword.onfocus = function (){
+
+    userSecondpassword.onfocus = function () {
         if (userSecondpassword.value !== '' && !validatePassword(userSecondpassword.value) || firstPassword !== secondPassword){
             inputWarining(userSecondpassword,false);
             removeError(signupErrors.secondPassword);
         }
     }
+
     createButton.onclick = function (e){
         e.preventDefault();
-         var name = "gonza14";
-        var lastName = "Asencio4418";
-        var dni = "12345678";
         var dob =  dateFormat(userBirth.value);
-        var phone = "0123456789";
-        var address = "asds 1666";
-        var location = "rosario";
-        var zip = "20001";
-        var email ="rose@radiumrocket.com";
-        var password = "BaSP2022";
-        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + name+ '&lastName=' + lastName
-        +'&dni=' + dni + '&dob=' + dob + '&phone='+ phone +'&address=' +address +'&city=' + location
-        + '&zip='+ zip + '&email=' + email + '&password=' +password;
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + userName.value + '&lastName=' + userLastname.value
+        + '&dni=' + userDni.value + '&dob=' + dob + '&phone='+ userPhone.value +'&address=' + userAddress.value +'&city=' + userLocation.value
+        + '&zip='+ userZipcode.value + '&email=' + userEmail.value + '&password=' + userPassword.value;
         validateURL(url);
-        if(validateName(userName.value) && validateName(userLastname.value) && validateDni(userDni.value) && 
-        validatePhone(userPhone.value) && validateAddress(userAddress.value) && validateLocation(userLocation.value)
-        && validateZipcode(userZipcode.value) && validateEmail(userEmail.value) && validatePassword(userPassword.value)
-        && validatePassword(userSecondpassword.value) && (userBirth.value !== null)){
-        /*  var dob =  dateFormat(userBirth.value);
-            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + userName.value + '&lastName=' + userLastname.value
-            + '&dni=' + userDni.value + '&dob=' + dob + '&phone='+ userPhone.value +'&address=' + userAddress.value +'&city=' + userLocation.value
-            + '&zip='+ userZipcode.value + '&email=' + userEmail.value + '&password=' + userPassword.value;
-            validateURL(url);*/
-        }else{
-            if(errorsMessage.length === 0){
-                alert("All from are empty");
-            }else{
-                alert("Form loaded incorrectly, the errors are: " + errorsMessage.join(" - "));
-            }    
         }
+        
+    function dateFormat(dates){
+        var [year,month,day] = dates.split('-');
+        var birthChange = [month,day,year].join('/');
+        return birthChange;
     }
-function removeError(item) {
-    for(var i = errorsMessage.length; i--;) {
-        if(errorsMessage[i] === item) {
-            errorsMessage.splice(i, 1);
-        }
-    }
-}
-function dateFormat(dates){
-    var [year,month,day] = dates.split('-');
-    var birthChange = [month,day,year].join('/');
-    return birthChange;
-}   
+       
 }   
 
