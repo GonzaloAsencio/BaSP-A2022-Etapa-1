@@ -126,7 +126,6 @@ window.onload = function () {
         if (validatePassword(userPassword.value) && validateEmail(userEmail.value)){
             var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + userEmail.value + '&password=' + userPassword.value;
             validateURL(url);
-          //  alert("Form loaded correctly, your data is: " + "Email: " + userEmail.value + " Contraseña: " + userPassword.value);
         }else {
             if(errorsMessaage.length > 0){
             alert("Form loaded incorrectly, the errors are:" + errorsMessaage.join('-'));

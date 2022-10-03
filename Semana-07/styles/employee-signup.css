@@ -61,7 +61,19 @@ main {
 .create-button{
     text-align: center;
 }
-input[type="button"]{
+input[id="backButton"]{
+    margin-top: 5px;
+    align-items: center;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    background: #ffffff;
+    border: 5px;
+    border-radius: 5px;
+    color: #373867;
+}
+input[id="createButton"]{
     margin-top: 20px;
     align-items: center;
     padding: 14px 36px;
@@ -73,7 +85,7 @@ input[type="button"]{
     border-radius: 5px;
     color: #373867;
 }
-input[type="button"]:hover{
+input[id="createButton"]:hover{
     background: #F13312;
     color: #ffffff;
 }
@@ -111,7 +123,7 @@ input[type="button"]:hover{
 @media(min-width :1512px){
     .form{
         width: 800px;
-        height: 900px;
+        height: 1000px;
     }
     .form > h2 {
         font-size: 50px;
@@ -146,5 +158,7 @@ input[type="button"]:hover{
         font-weight: 700;
         font-size: 35px;
     }
- 
+    #backButton{
+       font-size: 25px;
+    } 
 }

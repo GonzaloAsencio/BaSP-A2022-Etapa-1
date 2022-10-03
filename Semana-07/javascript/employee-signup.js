@@ -176,7 +176,9 @@ window.onload = function () {
     userName.value= localStorage.getItem("name");
     userLastname.value= localStorage.getItem("lastName");
     userDni.value = localStorage.getItem("dni");
-    userBirth.value = localStorage.getItem("dob");
+    var test= localStorage.getItem("dob");
+    var test2 = inputFormat(test);
+    userBirth.value = test2;
     userPhone.value = localStorage.getItem("phone");
     userAddress.value = localStorage.getItem("address");
     userLocation.value = localStorage.getItem("city");
@@ -194,7 +196,6 @@ window.onload = function () {
     userName.onfocus = function () {
         if(!validateName(userName.value) && userName.value !== ''){
             inputWarining(userName,false);
-            removeError(signupErrors.name);
         }
     }
 
@@ -207,7 +208,6 @@ window.onload = function () {
     userLastname.onfocus = function () {
         if(!validateName(userLastname.value) && userLastname.value !== ''){
             inputWarining(userLastname,false);
-            removeError(signupErrors.lastName);
         }
     }
 
@@ -220,7 +220,6 @@ window.onload = function () {
     userDni.onfocus = function () {
         if(!validateDni(userDni.value) && userDni.value !== ''){
             inputWarining(userDni,false);
-            removeError(signupErrors.dni);
         }
     }
 
@@ -233,7 +232,6 @@ window.onload = function () {
     userBirth.onfocus = function () {
         if(userBirth.value !== null){
             inputWarining(userBirth,false);
-            removeError(signupErrors.userBirth);
         }
     }
 
@@ -246,7 +244,6 @@ window.onload = function () {
     userPhone.onfocus = function () {
         if(!validatePhone(userPhone.value) && userPhone.value !== ''){
             inputWarining(userPhone,false);
-            removeError(signupErrors.phone);
         }
     }
 
@@ -259,7 +256,6 @@ window.onload = function () {
     userAddress.onfocus = function () {
         if(!validateAddress(userPhone.value) && userAddress.value !== ''){
             inputWarining(userAddress,false);
-            removeError(signupErrors.adress);
         }
     }
 
@@ -272,7 +268,6 @@ window.onload = function () {
     userLocation.onfocus = function () {
         if(!validateLocation(userLocation.value) && userLocation.value !== ''){
             inputWarining(userLocation,false);
-            removeError(signupErrors.location);
         }
     }
 
@@ -285,7 +280,6 @@ window.onload = function () {
     userZipcode.onfocus = function () {
         if(!validateZipcode(userZipcode.value) && userZipcode.value !== ''){
             inputWarining(userZipcode,false);
-            removeError(signupErrors.zipCode);
         }
     }
 
@@ -298,7 +292,6 @@ window.onload = function () {
     userEmail.onfocus = function () {
         if (!validateEmail(userEmail.value) && userEmail.value !== ''){
             inputWarining(userEmail,false);
-            removeError(signupErrors.email);
         }
     }
 
@@ -313,7 +306,6 @@ window.onload = function () {
     userPassword.onfocus = function () {
         if (userPassword.value !== '' && !validatePassword(userPassword.value)){
             inputWarining(userPassword,false);
-            removeError(signupErrors.password);
         }
     }
 
@@ -345,9 +337,15 @@ window.onload = function () {
         validateURL(url);
         }
         
-    function dateFormat(dates){
-        var [year,month,day] = dates.split('-');
+    function dateFormat(date){
+        var [year,month,day] = date.split('-');
         var birthChange = [month,day,year].join('/');
+        return birthChange;
+    }
+
+    function inputFormat(date){
+        var [month,day,year] = date.split('/');
+        var birthChange = [year,month,day].join('-');
         return birthChange;
     }
        

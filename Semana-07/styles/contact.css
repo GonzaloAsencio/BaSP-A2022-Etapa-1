@@ -70,7 +70,7 @@ main{
 .send-button{
     text-align: center;
 }
-input[type="button"]{
+input[id="sendButton"]{
     align-items: center;
     padding: 14px 36px;
     font-weight: 700;
@@ -81,7 +81,19 @@ input[type="button"]{
     border-radius: 5px;
     color: #373867;
 }
-input[type="button"]:hover{
+input[id="backButton"]{
+    margin-top: 5px;
+    align-items: center;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    background: #ffffff;
+    border: 5px;
+    border-radius: 5px;
+    color: #373867;
+}
+input[id="sendButton"]:hover{
     background: #F13312;
     color: #ffffff;
 }
@@ -132,7 +144,7 @@ input[type="button"]:hover{
     .login-button{
         padding: 40px;
     }
-    input[type="button"]{
+    input[id="sendButton"]{
         padding: 28px 70px;
         font-weight: 700;
         font-size: 35px;
@@ -146,4 +158,7 @@ input[type="button"]:hover{
     {
         font-size: 35px;
     }
+    #backButton{
+        font-size: 25px;
+     } 
 }
