@@ -6,6 +6,7 @@ function hasNumber(word){
     }
     return false;
 }
+
 function hasLetter(word){
     for (let index = 0; index < word.length; index++){
             if(isNaN(word[index])){
@@ -14,6 +15,7 @@ function hasLetter(word){
     }
         return false;
 }
+
 function letterCounter(word,number){
     if(word.length >= number){
         return true;
@@ -21,6 +23,7 @@ function letterCounter(word,number){
         return false;
     }
 }
+
 function removeItem(arr, item) {
     for(var i = arr.length; i--;) {
         if(arr[i] === item) {
@@ -28,6 +31,7 @@ function removeItem(arr, item) {
         }
     }
 }
+
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 function validateEmail (correo){
     if (emailExpression.test(correo)){
@@ -36,6 +40,7 @@ function validateEmail (correo){
         return false;       
     }
 }
+
 function validatePassword(password){
     if(letterCounter(password,8) && hasNumber(password) && hasLetter(password)){
         return true;        
@@ -43,6 +48,7 @@ function validatePassword(password){
         return false;        
     }   
 }
+
 function CreateWarning(inputError){   
     var warningDiv = document.createElement("div");
     var warningText = document.createElement("h2");
@@ -52,6 +58,7 @@ function CreateWarning(inputError){
     warningDiv.classList.add("text-error");
     inputError.insertAdjacentElement("afterend",warningDiv);
 }
+
 function deleteWarning(input){
     var search = input.parentElement;
     var elementNameExists = search.querySelector("#warningBox");
@@ -59,6 +66,7 @@ function deleteWarning(input){
         elementNameExists.remove();
     }
 }
+
 function inputWarining(input,activate){
     if(activate){
         CreateWarning(input);
@@ -71,26 +79,14 @@ function inputWarining(input,activate){
         input.classList.remove("text-error");
     }
 }
-function validateURL(url){
-     fetch(url)
-        .then(function(res){
-            return res.json();
-        })
-        .then(function (data){
-            if(!data.success){
-               throw new Error(data.msg);
-            }
-                alert("Succes: " + data.success + "\n" + "email:" +
-                userEmail.value + "\n"+ "Password: " + userPassword.value + + "\n" + "Request: " + data.msg);
-            })
-        .catch(function(error){
-            alert(error);
-    });
-}
+
 window.onload = function () {
     var userEmail = document.getElementById("userEmail");
     var userPassword = document.getElementById("userPassword");
     var loginButton = document.getElementById("loginButton");
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    var alertText = document.querySelector("#alertP");
     var errorsMessaage = [];
     var loginErrors = {
         email: "Invalid Email",
@@ -103,24 +99,28 @@ window.onload = function () {
             errorsMessaage.push(loginErrors.email);
         }
     }
+
     userEmail.onfocus = function (){
         if (!validateEmail(userEmail.value)){
             removeItem(errorsMessaage,loginErrors.email);
             inputWarining(userEmail,false);
         }
     }
+
     userPassword.onblur = function (){
         if (!validatePassword(userPassword.value) && userPassword.value !== ''){
             inputWarining(userPassword,true);
             errorsMessaage.push(loginErrors.password);   
         }
     }
+
     userPassword.onfocus = function (){
         if (userPassword.value !== '' &&!validatePassword(userPassword.value)){
             removeItem(errorsMessaage,loginErrors.password);
             inputWarining(userPassword,false);
         }
     }
+    
     loginButton.onclick = function (e){
         e.preventDefault();
         if (validatePassword(userPassword.value) && validateEmail(userEmail.value)){
@@ -132,4 +132,34 @@ window.onload = function () {
             }
         }
     }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+
+    function validateURL(url){
+        fetch(url)
+           .then(function(res){
+               return res.json();
+           })
+           .then(function (data){
+               if(!data.success){
+                  throw new Error(data.msg);
+               }
+                 alertText.textContent = "Succes: " + data.success + "\n" + "email:" +
+                 userEmail.value + "\n"+ "Password: " + userPassword.value + + "\n" + "Request: " + data.msg;
+                 modal.style.display = "block";
+               })
+           .catch(function(error){
+            alertText.textContent = error;
+            modal.style.display = "block";
+       });
+   }
 }

@@ -176,9 +176,9 @@ window.onload = function () {
     userName.value= localStorage.getItem("name");
     userLastname.value= localStorage.getItem("lastName");
     userDni.value = localStorage.getItem("dni");
-    var test= localStorage.getItem("dob");
-    var test2 = inputFormat(test);
-    userBirth.value = test2;
+    if (localStorage.getItem("dob")) {
+    userBirth.value = inputFormat(localStorage.getItem("dob"));
+    }
     userPhone.value = localStorage.getItem("phone");
     userAddress.value = localStorage.getItem("address");
     userLocation.value = localStorage.getItem("city");
@@ -324,7 +324,6 @@ window.onload = function () {
     userSecondpassword.onfocus = function () {
         if (userSecondpassword.value !== '' && !validatePassword(userSecondpassword.value) || firstPassword !== secondPassword){
             inputWarining(userSecondpassword,false);
-            removeError(signupErrors.secondPassword);
         }
     }
 
